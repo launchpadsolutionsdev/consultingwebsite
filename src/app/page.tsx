@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const features = [
   {
@@ -49,6 +49,51 @@ function useScrollAnimation() {
   }, [])
 
   return ref
+}
+
+// Count-up animation component
+function CountUpNumber({ start = 1000000, end = 2623980, duration = 2500 }: { start?: number; end?: number; duration?: number }) {
+  const [count, setCount] = useState(start)
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true)
+            const startTime = performance.now()
+            const animate = (currentTime: number) => {
+              const elapsed = currentTime - startTime
+              const progress = Math.min(elapsed / duration, 1)
+              // Easing function for smooth deceleration
+              const easeOut = 1 - Math.pow(1 - progress, 3)
+              const currentValue = Math.floor(start + (end - start) * easeOut)
+              setCount(currentValue)
+              if (progress < 1) {
+                requestAnimationFrame(animate)
+              }
+            }
+            requestAnimationFrame(animate)
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [start, end, duration, hasAnimated])
+
+  return (
+    <div ref={ref} className="inline-block">
+      ${count.toLocaleString()}
+    </div>
+  )
 }
 
 const testimonials = [
@@ -102,17 +147,41 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-gradient-to-r from-yellow-500/10 to-pink-500/10 blur-xl animate-float" style={{ animationDelay: '4s' }} />
       </section>
 
-      {/* Stats Section - Single Line */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center animate-on-scroll">
-            <div className="text-5xl md:text-6xl lg:text-7xl font-bold gradient-text mb-4 animate-gradient">
-              $2,623,980
+      {/* Stats Section - Dramatic Count-Up */}
+      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-pink-200/30 via-orange-200/30 to-yellow-200/30 rounded-full blur-3xl" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="text-center">
+            {/* The big number */}
+            <div className="mb-6 animate-on-scroll">
+              <div className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-extrabold tracking-tight leading-none">
+                <span className="gradient-text animate-gradient">
+                  <CountUpNumber />
+                </span>
+              </div>
             </div>
-            <div className="text-xl md:text-2xl text-gray-600 font-medium">raised for our partners</div>
+
+            {/* Subtitle */}
+            <div className="animate-on-scroll animate-delay-200">
+              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 tracking-wide">
+                raised for our partners
+              </p>
+            </div>
+
+            {/* Decorative accent */}
+            <div className="mt-8 flex justify-center animate-on-scroll animate-delay-300">
+              <div className="w-24 h-1.5 rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500" />
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Full-width divider line */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
       {/* Features Section */}
       <section className="py-24 section-gradient">
