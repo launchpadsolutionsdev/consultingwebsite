@@ -51,7 +51,7 @@ export default function Header() {
               </div>
             </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation + CTA Button - Right Aligned */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -62,10 +62,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
               className="btn-primary !px-6 !py-3"
