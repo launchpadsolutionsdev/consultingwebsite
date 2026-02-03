@@ -17,11 +17,11 @@ export default function Header() {
   return (
     <>
       {/* Sticky Announcement Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 announcement-banner text-center py-2 px-4">
+      <div className="fixed top-0 left-0 right-0 z-50 announcement-banner text-center py-2.5 px-4">
         <span>Unleash Your Fundraising Potential</span>
       </div>
 
-      <header className="fixed top-8 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <header className="fixed top-10 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <nav className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
