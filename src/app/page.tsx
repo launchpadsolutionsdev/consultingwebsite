@@ -91,7 +91,7 @@ function CountUpNumber({ start = 1000000, end = 2623980, duration = 2500 }: { st
 
   return (
     <div ref={ref} className="inline-block">
-      ${count.toLocaleString()}
+      ${count.toLocaleString()}+
     </div>
   )
 }
@@ -149,9 +149,10 @@ export default function Home() {
 
       {/* Stats Section - Dramatic Count-Up */}
       <section className="py-24 md:py-32 bg-white relative overflow-hidden">
-        {/* Subtle background glow */}
+        {/* Punchy background glow */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-pink-200/30 via-orange-200/30 to-yellow-200/30 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-pink-400/40 via-orange-400/40 to-yellow-400/40 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-r from-pink-500/30 via-orange-500/30 to-yellow-500/30 rounded-full blur-2xl" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
