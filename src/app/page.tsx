@@ -124,9 +124,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 animate-reveal">
-              <span className="gradient-text">Unleash Your</span>
+              <span className="gradient-text animate-shimmer">Unleash Your</span>
               <br />
-              <span className="text-white">Fundraising Potential</span>
+              <span className="text-white text-glow">Fundraising Potential</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed animate-reveal" style={{ animationDelay: '0.2s' }}>
               Experts in raffle management and charitable gaming solutions, trusted by nonprofits to run high-performing, transparent programs from start to finish.
@@ -141,10 +141,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Floating decorative elements */}
-        <div className="absolute top-1/4 left-10 w-20 h-20 rounded-full bg-gradient-to-r from-pink-500/20 to-orange-500/20 blur-xl animate-float" />
-        <div className="absolute bottom-1/3 right-10 w-32 h-32 rounded-full bg-gradient-to-r from-orange-500/20 to-yellow-500/20 blur-xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-gradient-to-r from-yellow-500/10 to-pink-500/10 blur-xl animate-float" style={{ animationDelay: '4s' }} />
+        {/* Floating decorative elements - enhanced with glow pulse */}
+        <div className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-gradient-to-r from-pink-500/30 to-orange-500/30 animate-glow-pulse" style={{ animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-10 w-48 h-48 rounded-full bg-gradient-to-r from-orange-500/25 to-yellow-500/25 animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-yellow-500/20 to-pink-500/20 animate-glow-pulse" style={{ animationDelay: '3s' }} />
+
+        {/* Floating particles */}
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-pink-400/60 animate-particle" />
+        <div className="absolute top-2/3 left-1/3 w-2 h-2 rounded-full bg-orange-400/60 animate-particle" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-4 h-4 rounded-full bg-yellow-400/50 animate-particle" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/4 right-1/3 w-2 h-2 rounded-full bg-pink-300/70 animate-particle" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full bg-orange-300/60 animate-particle" style={{ animationDelay: '3s' }} />
+
+        {/* Large ambient glow orbs */}
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-pink-500/15 blur-3xl animate-glow-pulse" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute -bottom-20 left-1/4 w-[400px] h-[200px] rounded-full bg-orange-500/10 blur-3xl animate-glow-pulse" style={{ animationDelay: '2.5s' }} />
       </section>
 
       {/* Stats Section - Dramatic Count-Up */}

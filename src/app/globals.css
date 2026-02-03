@@ -224,3 +224,72 @@ section {
   transform: translateY(-8px) rotateX(2deg);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
+
+/* Shimmer animation for gradient text */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Particle float animation */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px) scale(0.9);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-30px) translateX(15px) scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+.animate-particle {
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+/* Glow pulse for hero elements */
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: blur(40px);
+    opacity: 0.4;
+  }
+  50% {
+    filter: blur(60px);
+    opacity: 0.6;
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+/* Text glow effect */
+.text-glow {
+  text-shadow:
+    0 0 20px rgba(233, 30, 140, 0.5),
+    0 0 40px rgba(233, 30, 140, 0.3),
+    0 0 60px rgba(255, 140, 0, 0.2);
+}
+
+/* Orbit animation */
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
