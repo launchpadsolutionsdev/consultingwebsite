@@ -83,7 +83,7 @@ const faqs = [
 
 export default function PricingPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-28">
       {/* Hero Section */}
       <section className="hero-gradient py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
