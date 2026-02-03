@@ -57,7 +57,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="nav-link text-sm"
+                className="nav-link"
               >
                 {item.name}
               </Link>
@@ -68,7 +68,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="btn-primary text-sm !px-6 !py-3"
+              className="btn-primary !px-6 !py-3"
             >
               Get Started
             </Link>
@@ -109,7 +109,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="btn-primary text-center text-sm !px-6 !py-3 mt-4"
+                className="btn-primary text-center !px-6 !py-3 mt-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started
