@@ -27,18 +27,20 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
           <div className="text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Ready to supercharge your raffle?
+              Ready to work smarter?
             </h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Try Lightspeed, our powerful raffle management platform designed to help you launch, manage, and grow your fundraising campaigns.
+              Try Lightspeed, our AI-powered productivity suite built for nonprofit teams and charitable gaming operators. Automate the repetitive so you can focus on what matters.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/lightspeed"
+              <a
+                href="https://lightspeedutility.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
               >
                 Try Lightspeed
-              </Link>
+              </a>
               <Link
                 href="/contact"
                 className="btn-secondary"

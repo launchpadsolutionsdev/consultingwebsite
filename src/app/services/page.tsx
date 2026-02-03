@@ -67,15 +67,15 @@ export default function ServicesPage() {
   return (
     <div className="pt-28">
       {/* Hero Section */}
-      <section className="hero-gradient py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="hero-gradient py-24 lg:py-32 relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
               <span className="gradient-text">Services Designed</span>
               <br />
-              <span className="text-gray-900">For Your Success</span>
+              <span className="text-white">For Your Success</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed">
               Whether you need a helping hand or a full team behind you,
               we have flexible solutions to match your needs and budget.
             </p>

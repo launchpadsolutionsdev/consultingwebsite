@@ -61,15 +61,15 @@ export default function ContactPage() {
   return (
     <div className="pt-28">
       {/* Hero Section */}
-      <section className="hero-gradient py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="hero-gradient py-24 lg:py-32 relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
               <span className="gradient-text">Let&apos;s Start</span>
               <br />
-              <span className="text-gray-900">A Conversation</span>
+              <span className="text-white">A Conversation</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed">
               Ready to unleash your fundraising potential? Get in touch and
               let&apos;s discuss how we can help your organization succeed.
             </p>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const values = [
   {
@@ -42,15 +43,15 @@ export default function AboutPage() {
   return (
     <div className="pt-28">
       {/* Hero Section */}
-      <section className="hero-gradient py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="hero-gradient py-24 lg:py-32 relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
               <span className="gradient-text">We Believe in the</span>
               <br />
-              <span className="text-gray-900">Power of Giving</span>
+              <span className="text-white">Power of Giving</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed">
               Launchpad Solutions was founded with a simple mission: to help organizations
               maximize their fundraising potential through expert raffle management and
               charitable gaming solutions.
@@ -87,12 +88,14 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-subtle rounded-3xl flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-6xl mb-4">🚀</div>
-                  <h3 className="text-2xl font-bold gradient-text">Launching Dreams</h3>
-                  <p className="text-gray-600 mt-2">Since 2018</p>
-                </div>
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/team-winner.jpg"
+                  alt="Launchpad Solutions team presenting a grand prize winner check"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
