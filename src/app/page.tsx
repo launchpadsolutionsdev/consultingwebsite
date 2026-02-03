@@ -141,21 +141,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Floating decorative elements - enhanced with glow pulse */}
-        <div className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-gradient-to-r from-pink-500/30 to-orange-500/30 animate-glow-pulse" style={{ animationDelay: '0s' }} />
-        <div className="absolute bottom-1/3 right-10 w-48 h-48 rounded-full bg-gradient-to-r from-orange-500/25 to-yellow-500/25 animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-yellow-500/20 to-pink-500/20 animate-glow-pulse" style={{ animationDelay: '3s' }} />
-
         {/* Floating particles */}
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-pink-400/60 animate-particle" />
+        <div className="absolute top-1/4 left-[15%] w-2 h-2 rounded-full bg-pink-400/70 animate-particle" />
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-pink-400/60 animate-particle" style={{ animationDelay: '0.5s' }} />
         <div className="absolute top-2/3 left-1/3 w-2 h-2 rounded-full bg-orange-400/60 animate-particle" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-1/4 right-1/3 w-4 h-4 rounded-full bg-yellow-400/50 animate-particle" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-3 h-3 rounded-full bg-yellow-400/50 animate-particle" style={{ animationDelay: '4s' }} />
         <div className="absolute top-1/4 right-1/3 w-2 h-2 rounded-full bg-pink-300/70 animate-particle" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full bg-orange-300/60 animate-particle" style={{ animationDelay: '3s' }} />
-
-        {/* Large ambient glow orbs */}
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-pink-500/15 blur-3xl animate-glow-pulse" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute -bottom-20 left-1/4 w-[400px] h-[200px] rounded-full bg-orange-500/10 blur-3xl animate-glow-pulse" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute bottom-1/3 left-1/4 w-2 h-2 rounded-full bg-orange-300/60 animate-particle" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-[20%] right-[20%] w-1.5 h-1.5 rounded-full bg-yellow-300/70 animate-particle" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-[45%] left-[10%] w-2 h-2 rounded-full bg-pink-500/50 animate-particle" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute bottom-[20%] right-[15%] w-2.5 h-2.5 rounded-full bg-orange-400/55 animate-particle" style={{ animationDelay: '3.5s' }} />
+        <div className="absolute top-[60%] right-[10%] w-1.5 h-1.5 rounded-full bg-yellow-400/60 animate-particle" style={{ animationDelay: '4.5s' }} />
+        <div className="absolute bottom-[35%] left-[20%] w-2 h-2 rounded-full bg-pink-300/65 animate-particle" style={{ animationDelay: '5s' }} />
+        <div className="absolute top-[35%] left-[40%] w-1.5 h-1.5 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '5.5s' }} />
+        <div className="absolute bottom-[45%] right-[25%] w-2 h-2 rounded-full bg-yellow-300/55 animate-particle" style={{ animationDelay: '6s' }} />
+        <div className="absolute top-[55%] right-[35%] w-1.5 h-1.5 rounded-full bg-pink-400/45 animate-particle" style={{ animationDelay: '6.5s' }} />
       </section>
 
       {/* Stats Section - Dramatic Count-Up */}
