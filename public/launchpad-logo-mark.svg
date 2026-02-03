@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E91E8C" />
+      <stop offset="50%" stop-color="#FF8C00" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </linearGradient>
+  </defs>
+  <!-- Four-leaf clover shape -->
+  <circle cx="35" cy="35" r="25" fill="url(#logoGradient)" />
+  <circle cx="65" cy="35" r="25" fill="url(#logoGradient)" />
+  <circle cx="35" cy="65" r="25" fill="url(#logoGradient)" />
+  <circle cx="65" cy="65" r="25" fill="url(#logoGradient)" />
+  <!-- White square in center -->
+  <rect x="32" y="32" width="25" height="25" fill="white" rx="2" />
+</svg>
