@@ -148,34 +148,34 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Dramatic Count-Up */}
-      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
-        {/* Punchy background glow */}
+      <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-purple-900 via-pink-800 to-orange-700">
+        {/* Animated gradient overlay */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-pink-400/40 via-orange-400/40 to-yellow-400/40 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-r from-pink-500/30 via-orange-500/30 to-yellow-500/30 rounded-full blur-2xl" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-violet-900/50 via-transparent to-amber-600/30" />
+          <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-orange-500/30 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-pink-500/20 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* The big number */}
             <div className="mb-6 animate-on-scroll">
-              <div className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-extrabold tracking-tight leading-none">
-                <span className="gradient-text animate-gradient">
-                  <CountUpNumber />
-                </span>
+              <div className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-extrabold tracking-tight leading-none text-white drop-shadow-2xl">
+                <CountUpNumber />
               </div>
             </div>
 
             {/* Subtitle */}
             <div className="animate-on-scroll animate-delay-200">
-              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 tracking-wide">
+              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/90 tracking-wide">
                 raised for our partners
               </p>
             </div>
 
             {/* Decorative accent */}
             <div className="mt-8 flex justify-center animate-on-scroll animate-delay-300">
-              <div className="w-24 h-1.5 rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500" />
+              <div className="w-24 h-1.5 rounded-full bg-white/40" />
             </div>
           </div>
         </div>
