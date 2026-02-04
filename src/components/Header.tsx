@@ -21,9 +21,9 @@ export default function Header() {
         <span>Unleash your fundraising potential and take advantage of the $2B+ charitable gaming industry! 🎉</span>
       </div>
 
-      <header className="fixed top-10 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-md border-b border-pink-100/50 shadow-sm">
-        <nav className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+      <header className="fixed top-10 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-xl border-b border-pink-100/50 shadow-sm">
+        <nav className="max-w-7xl mx-auto px-10 lg:px-10">
+          <div className="flex items-center justify-between py-5">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -47,9 +47,9 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="btn-primary !px-6 !py-3"
+              className="btn-primary !px-6 !py-2.5 !rounded-full"
             >
-              Get Started
+              Get Started →
             </Link>
           </div>
 
@@ -88,10 +88,10 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="btn-primary text-center !px-6 !py-3 mt-4"
+                className="btn-primary text-center !px-6 !py-2.5 !rounded-full mt-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Started
+                Get Started →
               </Link>
             </div>
           </div>
