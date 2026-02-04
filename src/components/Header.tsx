@@ -17,8 +17,8 @@ export default function Header() {
   return (
     <>
       {/* Sticky Announcement Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 announcement-banner text-center py-2.5 px-4">
-        <span>Unleash your fundraising potential and take advantage of the $2B+ charitable gaming industry! 🎉</span>
+      <div className="fixed top-0 left-0 right-0 z-50 announcement-banner text-center py-2 px-4">
+        <span className="text-xs sm:text-sm leading-tight">Unleash your fundraising potential and take advantage of the $2B+ charitable gaming industry! 🎉</span>
       </div>
 
       <header className="fixed top-10 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-xl border-b border-pink-100/50 shadow-sm">
