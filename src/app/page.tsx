@@ -168,11 +168,23 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-pink-500/20 rounded-full blur-3xl" />
         </div>
 
+        {/* Floating particles */}
+        <div className="absolute top-[15%] left-[10%] w-2 h-2 rounded-full bg-pink-300/60 animate-particle" />
+        <div className="absolute top-[25%] right-[15%] w-3 h-3 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute bottom-[20%] left-[20%] w-2 h-2 rounded-full bg-yellow-300/55 animate-particle" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-[40%] right-[10%] w-2.5 h-2.5 rounded-full bg-pink-400/50 animate-particle" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute bottom-[30%] right-[25%] w-2 h-2 rounded-full bg-orange-400/45 animate-particle" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-[20%] left-[30%] w-1.5 h-1.5 rounded-full bg-yellow-400/60 animate-particle" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute bottom-[15%] right-[35%] w-2 h-2 rounded-full bg-pink-300/55 animate-particle" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-[60%] left-[15%] w-1.5 h-1.5 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '3.5s' }} />
+        <div className="absolute bottom-[40%] left-[35%] w-2 h-2 rounded-full bg-yellow-300/45 animate-particle" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-[35%] right-[30%] w-1.5 h-1.5 rounded-full bg-pink-400/55 animate-particle" style={{ animationDelay: '4.5s' }} />
+
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* The big number */}
             <div className="mb-6 animate-on-scroll">
-              <div className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white drop-shadow-2xl">
+              <div className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white [text-shadow:_0_4px_20px_rgba(0,0,0,0.4),_0_8px_40px_rgba(0,0,0,0.3)]">
                 <CountUpNumber />
               </div>
             </div>
