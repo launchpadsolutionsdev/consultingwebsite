@@ -161,48 +161,36 @@ export default function Home() {
         <div className="absolute top-[55%] right-[35%] w-1.5 h-1.5 rounded-full bg-pink-400/45 animate-particle" style={{ animationDelay: '6.5s' }} />
       </section>
 
-      {/* Trusted By Logo Marquee */}
-      <section className="bg-white py-8 border-b border-gray-100">
-        <div className="text-center mb-6">
-          <p className="text-gray-500 text-sm font-medium tracking-wide">Trusted by leading organizations</p>
-        </div>
-        <div className="relative overflow-hidden">
-          {/* Gradient fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+      {/* Trusted By Logo Strip */}
+      <section className="bg-white py-12 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-4 md:gap-8">
+            {/* Left line */}
+            <div className="hidden md:block flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-gray-300" />
 
-          {/* Scrolling container */}
-          <div className="flex animate-marquee">
-            {/* First set of logos */}
-            <div className="flex items-center gap-16 px-8 shrink-0">
-              <div className="relative h-12 w-40">
+            <p className="text-gray-400 text-sm font-medium tracking-wide uppercase whitespace-nowrap">Trusted by</p>
+
+            {/* Center line */}
+            <div className="hidden md:block w-16 h-px bg-gray-300" />
+
+            {/* Logos */}
+            <div className="flex items-center gap-8 md:gap-12">
+              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity">
                 <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
               </div>
-              <div className="relative h-12 w-40">
+              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity">
                 <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
               </div>
-              <div className="relative h-12 w-40">
+              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity hidden sm:block">
                 <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
               </div>
-              <div className="relative h-12 w-40">
+              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity hidden lg:block">
                 <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
               </div>
             </div>
-            {/* Duplicate set for seamless loop */}
-            <div className="flex items-center gap-16 px-8 shrink-0">
-              <div className="relative h-12 w-40">
-                <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
-              </div>
-              <div className="relative h-12 w-40">
-                <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
-              </div>
-              <div className="relative h-12 w-40">
-                <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
-              </div>
-              <div className="relative h-12 w-40">
-                <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
-              </div>
-            </div>
+
+            {/* Right line */}
+            <div className="hidden md:block flex-1 h-px bg-gradient-to-l from-transparent via-gray-200 to-gray-300" />
           </div>
         </div>
       </section>
