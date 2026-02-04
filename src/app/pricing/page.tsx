@@ -174,30 +174,81 @@ export default function PricingPage() {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-24 section-gradient">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Invest in Professional Management?
             </h2>
+            <p className="text-xl text-gray-400">Partner with proven experts who deliver results</p>
+          </div>
 
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-              <p>
-                <span className="font-semibold text-gray-900">We get paid when you do.</span> Our pricing model is built around your success—there&apos;s no risk on your end. If your program doesn&apos;t perform, neither do we. That&apos;s how confident we are in what we deliver.
-              </p>
-
-              <p>
-                We&apos;re not consultants who read a textbook. We&apos;re <span className="font-semibold text-gray-900">proven operators</span> who&apos;ve built and managed some of the most successful charitable gaming programs in Canada—including the largest hospital 50/50 in the country. We know what works because we&apos;ve done it ourselves, at scale, for years.
-              </p>
-
-              <p>
-                We&apos;ve already made the mistakes so you don&apos;t have to. The compliance headaches, the marketing misfires, the operational hiccups—we&apos;ve seen it all and built systems to avoid them. When you work with us, you&apos;re getting <span className="font-semibold text-gray-900">years of hard-won experience</span> from day one.
-              </p>
-
-              <p>
-                Bottom line: we handle the complexity so you can focus on your mission. No learning curve, no guesswork, no stress—just results.
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Zero Risk Card */}
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Zero Risk — We Get Paid When You Do</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Our pricing model is built around your success. If your program doesn&apos;t perform, neither do we. That&apos;s how confident we are in what we deliver.
               </p>
             </div>
+
+            {/* Proven Operators Card */}
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Proven Operators, Not Consultants</h3>
+              <p className="text-gray-300 leading-relaxed">
+                We&apos;ve built and managed some of the most successful charitable gaming programs in Canada—including the largest hospital 50/50 in the country. We know what works because we&apos;ve done it ourselves.
+              </p>
+            </div>
+
+            {/* Experience Card */}
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">We&apos;ve Already Made the Mistakes</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Compliance headaches, marketing misfires, operational hiccups—we&apos;ve seen it all and built systems to avoid them. You get years of hard-won experience from day one.
+              </p>
+            </div>
+
+            {/* Focus Card */}
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Focus on Your Mission</h3>
+              <p className="text-gray-300 leading-relaxed">
+                We handle the complexity so you can focus on what matters. No learning curve, no guesswork, no stress—just results that transform your fundraising.
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center">
+            <p className="text-gray-400 text-lg">Ready to see the difference?</p>
+            <Link href="/contact" className="inline-block mt-4 btn-primary">
+              Book Your Free Consultation
+            </Link>
           </div>
         </div>
       </section>
