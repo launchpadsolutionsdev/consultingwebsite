@@ -150,19 +150,16 @@ export default function Home() {
                   <div className="hidden md:block w-px h-8 bg-gray-200" />
 
                   <div className="flex items-center gap-6 md:gap-10 flex-wrap justify-center">
-                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity">
+                    <div className="relative h-10 w-28 md:h-11 md:w-32">
                       <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
                     </div>
-                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity">
+                    <div className="relative h-10 w-28 md:h-11 md:w-32">
                       <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
                     </div>
-                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity hidden sm:block">
+                    <div className="relative h-10 w-28 md:h-11 md:w-32 hidden sm:block">
                       <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
                     </div>
-                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity hidden lg:block">
-                      <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
-                    </div>
-                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity hidden lg:block">
+                    <div className="relative h-10 w-28 md:h-11 md:w-32 hidden lg:block">
                       <Image src="/images/J&J.png" alt="J&J" fill className="object-contain" />
                     </div>
                   </div>
