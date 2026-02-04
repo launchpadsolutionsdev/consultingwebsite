@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
 const features = [
@@ -138,6 +139,45 @@ export default function Home() {
               <Link href="/services" className="btn-secondary text-lg !bg-white/10 !border-white/30 !text-white hover:!bg-white/20">
                 Explore Services
               </Link>
+            </div>
+
+            {/* Trusted By Logos */}
+            <div className="mt-16 animate-reveal" style={{ animationDelay: '0.6s' }}>
+              <p className="text-gray-400 text-sm uppercase tracking-wider mb-6">Trusted by leading organizations</p>
+              <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                <div className="relative h-12 w-28 md:h-14 md:w-32 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
+                  <Image
+                    src="/images/TB5050 Logo Testemonial.png"
+                    alt="Thunder Bay 50/50"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative h-12 w-28 md:h-14 md:w-32 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
+                  <Image
+                    src="/images/Thunder Bay Catch The Ace Logo Testemonial.png"
+                    alt="Thunder Bay Catch The Ace"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative h-12 w-28 md:h-14 md:w-32 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
+                  <Image
+                    src="/images/Rotary House Lottery Testemonial.png"
+                    alt="Rotary House Lottery"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative h-12 w-28 md:h-14 md:w-32 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
+                  <Image
+                    src="/images/CFAC Jeep Raffle Logo Tesetmonial.png"
+                    alt="CFAC Jeep Raffle"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
