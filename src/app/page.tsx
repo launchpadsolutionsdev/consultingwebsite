@@ -118,7 +118,7 @@ export default function Home() {
   const animationRef = useScrollAnimation()
 
   return (
-    <div className="pt-32" ref={animationRef}>
+    <div className="pt-36 sm:pt-32" ref={animationRef}>
       {/* Hero Section */}
       <section className="hero-gradient min-h-[90vh] flex items-center relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 relative z-10">
