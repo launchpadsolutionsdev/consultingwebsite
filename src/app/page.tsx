@@ -184,7 +184,7 @@ export default function Home() {
           <div className="text-center">
             {/* The big number */}
             <div className="mb-6 animate-on-scroll">
-              <div className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white [text-shadow:_0_4px_20px_rgba(0,0,0,0.4),_0_8px_40px_rgba(0,0,0,0.3)]">
+              <div className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white [text-shadow:_0_4px_20px_rgba(0,0,0,0.2),_0_8px_40px_rgba(0,0,0,0.15)]">
                 <CountUpNumber />
               </div>
             </div>
