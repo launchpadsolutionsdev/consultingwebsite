@@ -62,27 +62,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 relative">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#E91E8C" />
-                      <stop offset="50%" stopColor="#FF8C00" />
-                      <stop offset="100%" stopColor="#FFD700" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="35" cy="35" r="25" fill="url(#footerLogoGradient)" />
-                  <circle cx="65" cy="35" r="25" fill="url(#footerLogoGradient)" />
-                  <circle cx="35" cy="65" r="25" fill="url(#footerLogoGradient)" />
-                  <circle cx="65" cy="65" r="25" fill="url(#footerLogoGradient)" />
-                  <rect x="32" y="32" width="25" height="25" fill="white" rx="2" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight">Launchpad</span>
-                <span className="text-[10px] font-medium tracking-[0.25em] text-gray-500 uppercase -mt-1">Solutions</span>
-              </div>
+            <Link href="/" className="flex items-center mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/launchpad-logo-full.png"
+                alt="Launchpad Solutions"
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-gray-600 mb-6 max-w-sm">
               Expert raffle management and charitable gaming solutions. We help organizations unleash their fundraising potential.
