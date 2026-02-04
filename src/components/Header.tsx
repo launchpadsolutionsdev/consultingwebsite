@@ -16,12 +16,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Sticky Announcement Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 announcement-banner text-center py-2 px-4">
-        <span className="text-xs sm:text-sm leading-tight">Unleash your fundraising potential and take advantage of the $2B+ charitable gaming industry! 🎉</span>
-      </div>
-
-      <header className="fixed top-14 sm:top-10 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-xl border-b border-pink-100/50 shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-xl border-b border-pink-100/50 shadow-sm">
         <nav className="max-w-7xl mx-auto px-10 lg:px-10">
           <div className="flex items-center justify-between py-5">
             {/* Logo */}
@@ -49,7 +44,7 @@ export default function Header() {
               href="/contact"
               className="btn-primary !px-6 !py-2.5 !rounded-full"
             >
-              Get Started →
+              Get Started
             </Link>
           </div>
 
@@ -91,7 +86,7 @@ export default function Header() {
                 className="btn-primary text-center !px-6 !py-2.5 !rounded-full mt-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Started →
+                Get Started
               </Link>
             </div>
           </div>
