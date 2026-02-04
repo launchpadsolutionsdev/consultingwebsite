@@ -176,26 +176,27 @@ export default function PricingPage() {
       {/* Value Proposition */}
       <section className="py-24 section-gradient">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
               Why Invest in Professional Management?
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              The numbers speak for themselves.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="card text-center">
-              <div className="text-4xl font-bold gradient-text mb-2">3x</div>
-              <p className="text-gray-600">Average increase in funds raised with professional management</p>
-            </div>
-            <div className="card text-center">
-              <div className="text-4xl font-bold gradient-text mb-2">50%</div>
-              <p className="text-gray-600">Reduction in staff time spent on campaign management</p>
-            </div>
-            <div className="card text-center">
-              <div className="text-4xl font-bold gradient-text mb-2">100%</div>
-              <p className="text-gray-600">Compliance confidence with expert guidance</p>
+
+            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                <span className="font-semibold text-gray-900">We get paid when you do.</span> Our pricing model is built around your success—there&apos;s no risk on your end. If your program doesn&apos;t perform, neither do we. That&apos;s how confident we are in what we deliver.
+              </p>
+
+              <p>
+                We&apos;re not consultants who read a textbook. We&apos;re <span className="font-semibold text-gray-900">proven operators</span> who&apos;ve built and managed some of the most successful charitable gaming programs in Canada—including the largest hospital 50/50 in the country. We know what works because we&apos;ve done it ourselves, at scale, for years.
+              </p>
+
+              <p>
+                We&apos;ve already made the mistakes so you don&apos;t have to. The compliance headaches, the marketing misfires, the operational hiccups—we&apos;ve seen it all and built systems to avoid them. When you work with us, you&apos;re getting <span className="font-semibold text-gray-900">years of hard-won experience</span> from day one.
+              </p>
+
+              <p>
+                Bottom line: we handle the complexity so you can focus on your mission. No learning curve, no guesswork, no stress—just results.
+              </p>
             </div>
           </div>
         </div>
