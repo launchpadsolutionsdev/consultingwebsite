@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
 
 const navigation = [
@@ -27,13 +26,11 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/launchpad-logo-full.png"
                 alt="Launchpad Solutions"
-                width={220}
-                height={60}
                 className="h-12 w-auto"
-                priority
               />
             </Link>
 
