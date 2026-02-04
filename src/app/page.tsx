@@ -187,6 +187,9 @@ export default function Home() {
               <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity hidden lg:block">
                 <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
               </div>
+              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity hidden lg:block">
+                <Image src="/images/J&J.png" alt="J&J" fill className="object-contain" />
+              </div>
             </div>
 
             {/* Right line */}
