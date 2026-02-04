@@ -203,7 +203,7 @@ export default function Home() {
               End-to-End Raffle Management
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We handle every aspect of your charitable gaming campaign,
+              We can handle every aspect of your charitable gaming campaign,
               so you can focus on what matters most—your mission.
             </p>
           </div>

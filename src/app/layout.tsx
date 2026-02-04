@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'Launchpad Solutions | Raffle Management & Charitable Gaming Experts',
   description: 'Unleash your fundraising potential with Launchpad Solutions. Expert raffle management and charitable gaming solutions for organizations of all sizes.',
   keywords: 'raffle management, charitable gaming, fundraising, lottery management, nonprofit fundraising',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

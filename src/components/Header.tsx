@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 const navigation = [
@@ -18,37 +19,22 @@ export default function Header() {
     <>
       {/* Sticky Announcement Banner */}
       <div className="fixed top-0 left-0 right-0 z-50 announcement-banner text-center py-2.5 px-4">
-        <span>Unleash Your Fundraising Potential</span>
+        <span>Unleash your fundraising potential and take advantage of the $2B+ charitable gaming industry! 🎉</span>
       </div>
 
-      <header className="fixed top-10 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <header className="fixed top-10 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-md border-b border-pink-100/50 shadow-sm">
         <nav className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-4">
-              <div className="w-14 h-14 relative">
-                {/* SVG Logo mark */}
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#E91E8C" />
-                      <stop offset="50%" stopColor="#FF8C00" />
-                      <stop offset="100%" stopColor="#FFD700" />
-                    </linearGradient>
-                  </defs>
-                  {/* Four-leaf clover shape */}
-                  <circle cx="35" cy="35" r="25" fill="url(#logoGradient)" />
-                  <circle cx="65" cy="35" r="25" fill="url(#logoGradient)" />
-                  <circle cx="35" cy="65" r="25" fill="url(#logoGradient)" />
-                  <circle cx="65" cy="65" r="25" fill="url(#logoGradient)" />
-                  {/* White square in center */}
-                  <rect x="32" y="32" width="25" height="25" fill="white" rx="2" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold tracking-tight">Launchpad</span>
-                <span className="text-xs font-medium tracking-[0.25em] text-gray-500 uppercase -mt-1">Solutions</span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/launchpad-logo-full.png"
+                alt="Launchpad Solutions"
+                width={220}
+                height={60}
+                className="h-12 w-auto"
+                priority
+              />
             </Link>
 
           {/* Desktop Navigation + CTA Button - Right Aligned */}

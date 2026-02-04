@@ -23,27 +23,32 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-100">
       {/* Lightspeed CTA Section */}
-      <div className="bg-gradient-to-r from-pink-50 via-orange-50 to-yellow-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 relative z-10">
           <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to work smarter?
             </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Try Lightspeed, our AI-powered productivity suite built for nonprofit teams and charitable gaming operators. Automate the repetitive so you can focus on what matters.
+            <p className="text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Lightspeed is an AI-powered productivity suite built for nonprofit teams and charitable gaming operators. Trained on thousands of real-world examples — from customer service to copywriting to data management — Lightspeed isn&apos;t a generic chatbot. It&apos;s a purpose-built toolkit that automates the repetitive so you can focus on what matters.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://lightspeedutility.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-full text-gray-900 bg-white hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Try Lightspeed
               </a>
               <Link
                 href="/contact"
-                className="btn-secondary"
+                className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-full text-white border border-white/30 hover:bg-white/10 transition-all duration-200"
               >
                 Talk to Our Team
               </Link>
