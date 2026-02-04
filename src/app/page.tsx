@@ -172,7 +172,7 @@ export default function Home() {
           <div className="text-center">
             {/* The big number */}
             <div className="mb-6 animate-on-scroll">
-              <div className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-extrabold tracking-tight leading-none text-white drop-shadow-2xl">
+              <div className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white drop-shadow-2xl">
                 <CountUpNumber />
               </div>
             </div>
@@ -264,6 +264,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+        </div>
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 animate-on-scroll">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Fundraising?
+          </h2>
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+            Book a free 30-minute consultation and discover how Launchpad Solutions
+            can help you reach your fundraising goals.
+          </p>
+          <Link href="/contact" className="btn-primary text-lg animate-pulse-glow">
+            Get Your Free Consultation
+          </Link>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-24 section-gradient">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -289,27 +310,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
-        </div>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Fundraising?
-          </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Book a free 30-minute consultation and discover how Launchpad Solutions
-            can help you reach your fundraising goals.
-          </p>
-          <Link href="/contact" className="btn-primary text-lg animate-pulse-glow">
-            Get Your Free Consultation
-          </Link>
         </div>
       </section>
     </div>
