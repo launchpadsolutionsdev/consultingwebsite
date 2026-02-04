@@ -71,22 +71,6 @@ export default function SuccessStoriesPage() {
         </div>
       </section>
 
-      {/* Thunder Bay 50/50 Section Header */}
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-4">
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300" />
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center px-4">
-              Thunder Bay 50/50
-            </h2>
-            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300" />
-          </div>
-          <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
-            Featured in major media outlets across Canada for record-breaking prizes and community impact.
-          </p>
-        </div>
-      </section>
-
       {/* Articles Section */}
       <section className="py-8 bg-gray-50">
         {articles.map((article, index) => (
