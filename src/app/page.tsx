@@ -141,50 +141,7 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Trusted By Logos */}
-            <div className="mt-16 animate-reveal" style={{ animationDelay: '0.6s' }}>
-              <p className="text-gray-400 text-sm uppercase tracking-wider mb-6">Trusted by leading organizations</p>
-            </div>
-          </div>
-        </div>
-
-        {/* White logo strip */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm py-6 z-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-              <div className="relative h-12 w-28 md:h-14 md:w-36 hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="/images/TB5050 Logo Testemonial.png"
-                  alt="Thunder Bay 50/50"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="relative h-12 w-28 md:h-14 md:w-36 hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="/images/Thunder Bay Catch The Ace Logo Testemonial.png"
-                  alt="Thunder Bay Catch The Ace"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="relative h-12 w-28 md:h-14 md:w-36 hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="/images/Rotary House Lottery Testemonial.png"
-                  alt="Rotary House Lottery"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="relative h-12 w-28 md:h-14 md:w-36 hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="/images/CFAC Jeep Raffle Logo Tesetmonial.png"
-                  alt="CFAC Jeep Raffle"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
+            {/* Trusted By Logos - text removed, now part of strip below */}
           </div>
         </div>
         {/* Floating particles */}
@@ -202,6 +159,52 @@ export default function Home() {
         <div className="absolute top-[35%] left-[40%] w-1.5 h-1.5 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '5.5s' }} />
         <div className="absolute bottom-[45%] right-[25%] w-2 h-2 rounded-full bg-yellow-300/55 animate-particle" style={{ animationDelay: '6s' }} />
         <div className="absolute top-[55%] right-[35%] w-1.5 h-1.5 rounded-full bg-pink-400/45 animate-particle" style={{ animationDelay: '6.5s' }} />
+      </section>
+
+      {/* Trusted By Logo Marquee */}
+      <section className="bg-white py-8 border-b border-gray-100">
+        <div className="text-center mb-6">
+          <p className="text-gray-500 text-sm font-medium tracking-wide">Trusted by leading organizations</p>
+        </div>
+        <div className="relative overflow-hidden">
+          {/* Gradient fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+
+          {/* Scrolling container */}
+          <div className="flex animate-marquee">
+            {/* First set of logos */}
+            <div className="flex items-center gap-16 px-8 shrink-0">
+              <div className="relative h-12 w-40">
+                <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
+              </div>
+              <div className="relative h-12 w-40">
+                <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
+              </div>
+              <div className="relative h-12 w-40">
+                <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
+              </div>
+              <div className="relative h-12 w-40">
+                <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
+              </div>
+            </div>
+            {/* Duplicate set for seamless loop */}
+            <div className="flex items-center gap-16 px-8 shrink-0">
+              <div className="relative h-12 w-40">
+                <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
+              </div>
+              <div className="relative h-12 w-40">
+                <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
+              </div>
+              <div className="relative h-12 w-40">
+                <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
+              </div>
+              <div className="relative h-12 w-40">
+                <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Stats Section - Dramatic Count-Up */}
