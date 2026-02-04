@@ -52,9 +52,7 @@ export default function AboutPage() {
               <span className="text-white">Power of Giving</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
-              Launchpad Solutions was founded with a simple mission: to help organizations
-              maximize their fundraising potential through expert raffle management and
-              charitable gaming solutions.
+              At Launchpad Solutions, our mission is to empower nonprofit organizations by providing innovative, reliable, and user-friendly raffle management services. We believe in unlocking the full potential of every fundraising initiative; streamlining operations, maximizing impact, and helping communities thrive. Through tailored solutions and hands-on support, we help organizations raise more with less stress, so they can focus on what matters most: making a difference.
             </p>
           </div>
         </div>
@@ -66,24 +64,25 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Story
+                Why Launchpad Exists
               </h2>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  We started Launchpad Solutions after witnessing firsthand the challenges
-                  nonprofits face when running fundraising raffles. The regulatory complexity,
-                  technical hurdles, and operational demands often overwhelmed organizations
-                  trying to do good in their communities.
+                  Before Launchpad Solutions ever existed, I managed one of the most successful charitable lotteries in the country: the Thunder Bay 50/50. Since its inception in January 2021, I helped lead the program to generate over $180 million in total revenue, growing it into the largest hospital 50/50 in Canada.
                 </p>
                 <p>
-                  Today, we&apos;re proud to be the trusted partner for hundreds of organizations
-                  across the country. From small community groups to large healthcare foundations,
-                  we&apos;ve helped our clients raise over $50 million for causes that matter.
+                  What began as a local fundraiser quickly evolved into a nationally recognized success story; loved by hundreds of thousands of players, celebrated by provincial media organizations, and deeply valued by the healthcare system it supports. We achieved this by keeping everything in-house: strategy, marketing, analytics, compliance, customer service, and even retail operations. We built a physical ticket store from the ground up that now generates millions annually, and created a scalable model built on data, agility, and trust.
                 </p>
                 <p>
-                  Our approach is simple: we handle the complexity so you can focus on your
-                  mission. Whether you need full-service campaign management or targeted support
-                  for specific challenges, we&apos;re here to help you succeed.
+                  In December 2025, the Thunder Bay 50/50 broke records once again; awarding the largest Grand Prize ever for a hospital 50/50 lottery in Canada, with over $15.7 million in revenue that month alone. I created Launchpad Solutions to bring that same high-performing, detail-focused approach to nonprofits across the country.
+                </p>
+                <p>
+                  Whether you&apos;re just getting started or ready to scale, we&apos;ll help you build a raffle program that&apos;s sustainable, compliant, and wildly successful; without having to figure it all out on your own.
+                </p>
+                <p className="mt-8 font-medium text-gray-800">
+                  -Torin Gunnell
+                  <br />
+                  <span className="text-gray-600">President, Launchpad Solutions</span>
                 </p>
               </div>
             </div>
