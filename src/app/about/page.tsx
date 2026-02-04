@@ -71,13 +71,16 @@ export default function AboutPage() {
                   Before Launchpad Solutions ever existed, I managed one of the most successful charitable lotteries in the country: the Thunder Bay 50/50. Since its inception in January 2021, I helped lead the program to generate over $180 million in total revenue, growing it into the largest hospital 50/50 in Canada.
                 </p>
                 <p>
-                  What began as a local fundraiser quickly evolved into a nationally recognized success story; loved by hundreds of thousands of players, celebrated by provincial media organizations, and deeply valued by the healthcare system it supports. We achieved this by keeping everything in-house: strategy, marketing, analytics, compliance, customer service, and even retail operations. We built a physical ticket store from the ground up that now generates millions annually, and created a scalable model built on data, agility, and trust.
+                  What began as a local fundraiser quickly evolved into a nationally recognized success story—loved by hundreds of thousands of players, celebrated by provincial media organizations, and deeply valued by the healthcare system it supports. We achieved this by keeping everything in-house: strategy, marketing, analytics, compliance, customer service, and even retail operations. We built a physical ticket store from the ground up that now generates millions annually, and created a scalable model built on data, agility, and trust.
                 </p>
                 <p>
-                  In December 2025, the Thunder Bay 50/50 broke records once again; awarding the largest Grand Prize ever for a hospital 50/50 lottery in Canada, with over $15.7 million in revenue that month alone. I created Launchpad Solutions to bring that same high-performing, detail-focused approach to nonprofits across the country.
+                  In December 2025, the Thunder Bay 50/50 broke records once again, awarding the largest Grand Prize ever for a hospital 50/50 lottery in Canada, with over $15.7 million in revenue that month alone.
                 </p>
                 <p>
-                  Whether you&apos;re just getting started or ready to scale, we&apos;ll help you build a raffle program that&apos;s sustainable, compliant, and wildly successful; without having to figure it all out on your own.
+                  Now, the team behind Canada&apos;s most successful hospital 50/50 is ready to do something new: help other nonprofits achieve the same results. I created Launchpad Solutions to bring that high-performing, detail-focused approach to organizations across the country—combining proven strategies with purpose-built technology designed to make lottery management simpler, smarter, and more scalable than ever before.
+                </p>
+                <p>
+                  Whether you&apos;re just getting started or ready to grow, we&apos;re here to help you build a raffle program that&apos;s sustainable, compliant, and wildly successful—without having to figure it all out on your own.
                 </p>
                 <p className="mt-8 font-medium text-gray-800">
                   -Torin Gunnell
