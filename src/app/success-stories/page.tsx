@@ -10,7 +10,7 @@ const stats = [
 const articles = [
   {
     outlet: 'CTV News',
-    logo: '/images/ctv-logo.png',
+    logo: '/images/ctv-logo.jpg',
     headline: 'Timmins man wins $7.7M in Thunder Bay hospital\'s 50/50 draw',
     excerpt: 'A Timmins man is $7.7 million richer after winning the Thunder Bay Regional Health Sciences Foundation\'s 50/50 draw. The life-changing prize marks another record-breaking moment for the lottery program that has become the largest hospital 50/50 in Canada.',
     image: '/images/ctv-timmins-man.jpg',
@@ -19,7 +19,7 @@ const articles = [
   },
   {
     outlet: 'CBC News',
-    logo: '/images/cbc-logo.png',
+    logo: '/images/cbc-logo.jpg',
     headline: 'Thunder Bay hospital foundation\'s 50/50 draw breaks records, surpasses $6.4 million',
     excerpt: 'A couple from the Greater Sudbury community of Hanmer is now $6.4 million richer, after winning the 2024 Thunder Bay Regional Health Sciences Foundation\'s 50/50 draw. Natalie Bigras and her husband Clem received the life-changing phone call on Jan. 3, telling them their ticket was drawn for the grand prize.',
     image: '/images/cbc-nat-clem.jpg',
@@ -28,7 +28,7 @@ const articles = [
   },
   {
     outlet: 'TB Newswatch',
-    logo: '/images/tbnewswatch-logo.png',
+    logo: '/images/tbnewswatch-logo.jpg',
     headline: 'Nolalu Man Wins $2.3M 50/50 Grand Prize',
     excerpt: 'A Nolalu resident is celebrating after winning the Thunder Bay Regional Health Sciences Foundation\'s 50/50 Grand Prize of $2.3 million. The win continues the remarkable success of the Thunder Bay 50/50 program, which has raised millions for healthcare in Northwestern Ontario.',
     image: '/images/torin-cass-story.jpg',
