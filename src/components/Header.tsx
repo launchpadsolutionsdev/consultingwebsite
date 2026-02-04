@@ -21,7 +21,7 @@ export default function Header() {
         <span className="text-xs sm:text-sm leading-tight">Unleash your fundraising potential and take advantage of the $2B+ charitable gaming industry! 🎉</span>
       </div>
 
-      <header className="fixed top-10 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-xl border-b border-pink-100/50 shadow-sm">
+      <header className="fixed top-14 sm:top-10 left-0 right-0 z-50 bg-gradient-to-r from-white/95 via-white/90 to-pink-50/80 backdrop-blur-xl border-b border-pink-100/50 shadow-sm">
         <nav className="max-w-7xl mx-auto px-10 lg:px-10">
           <div className="flex items-center justify-between py-5">
             {/* Logo */}
