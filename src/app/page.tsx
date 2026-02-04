@@ -141,7 +141,34 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Trusted By Logos - text removed, now part of strip below */}
+            {/* Trusted By Logos - Inside Hero */}
+            <div className="mt-16 animate-reveal" style={{ animationDelay: '0.6s' }}>
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl px-8 py-6 shadow-xl">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                  <p className="text-gray-500 text-sm font-medium tracking-wide uppercase whitespace-nowrap">Trusted by</p>
+
+                  <div className="hidden md:block w-px h-8 bg-gray-200" />
+
+                  <div className="flex items-center gap-6 md:gap-10 flex-wrap justify-center">
+                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity">
+                      <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
+                    </div>
+                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity">
+                      <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
+                    </div>
+                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity hidden sm:block">
+                      <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
+                    </div>
+                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity hidden lg:block">
+                      <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
+                    </div>
+                    <div className="relative h-10 w-28 md:h-11 md:w-32 opacity-70 hover:opacity-100 transition-opacity hidden lg:block">
+                      <Image src="/images/J&J.png" alt="J&J" fill className="object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Floating particles */}
@@ -159,43 +186,6 @@ export default function Home() {
         <div className="absolute top-[35%] left-[40%] w-1.5 h-1.5 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '5.5s' }} />
         <div className="absolute bottom-[45%] right-[25%] w-2 h-2 rounded-full bg-yellow-300/55 animate-particle" style={{ animationDelay: '6s' }} />
         <div className="absolute top-[55%] right-[35%] w-1.5 h-1.5 rounded-full bg-pink-400/45 animate-particle" style={{ animationDelay: '6.5s' }} />
-      </section>
-
-      {/* Trusted By Logo Strip */}
-      <section className="bg-white py-12 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-4 md:gap-8">
-            {/* Left line */}
-            <div className="hidden md:block flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-gray-300" />
-
-            <p className="text-gray-400 text-sm font-medium tracking-wide uppercase whitespace-nowrap">Trusted by</p>
-
-            {/* Center line */}
-            <div className="hidden md:block w-16 h-px bg-gray-300" />
-
-            {/* Logos */}
-            <div className="flex items-center gap-8 md:gap-12">
-              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity">
-                <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
-              </div>
-              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity">
-                <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
-              </div>
-              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity hidden sm:block">
-                <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
-              </div>
-              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity hidden lg:block">
-                <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="CFAC Jeep Raffle" fill className="object-contain" />
-              </div>
-              <div className="relative h-10 w-32 md:h-12 md:w-36 opacity-80 hover:opacity-100 transition-opacity hidden lg:block">
-                <Image src="/images/J&J.png" alt="J&J" fill className="object-contain" />
-              </div>
-            </div>
-
-            {/* Right line */}
-            <div className="hidden md:block flex-1 h-px bg-gradient-to-l from-transparent via-gray-200 to-gray-300" />
-          </div>
-        </div>
       </section>
 
       {/* Stats Section - Dramatic Count-Up */}
