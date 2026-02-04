@@ -98,19 +98,19 @@ function CountUpNumber({ start = 1000000, end = 2623980, duration = 2500 }: { st
 
 const testimonials = [
   {
-    quote: "Launchpad Solutions transformed our annual fundraiser. We raised 3x more than previous years.",
-    author: "Sarah Johnson",
-    role: "Executive Director, Community Foundation",
+    quote: "Launchpad Solutions has been instrumental in the success of our Thunder Bay 50/50 and Catch the Ace lotteries. Their deep expertise and hands-on approach have helped us scale responsibly while maintaining trust, transparency, and exceptional performance.",
+    author: "Glenn Craig",
+    role: "President, Thunder Bay Regional Health Sciences Foundation",
   },
   {
-    quote: "Their expertise in charitable gaming compliance gave us peace of mind throughout the entire process.",
-    author: "Michael Chen",
-    role: "Development Manager, Healthcare Nonprofit",
+    quote: "Launchpad Solutions gave our House Lottery the structure and confidence we needed to succeed. Their team guided us every step of the way with professionalism and a deep understanding of charitable gaming.",
+    author: "Cindy Levanto",
+    role: "Fort William Rotary Club of Thunder Bay",
   },
   {
-    quote: "The team's attention to detail and proactive communication made all the difference.",
-    author: "Emily Rodriguez",
-    role: "Fundraising Coordinator, Education Alliance",
+    quote: "Launching the Cruising For a Cure Pink Jeep Raffle with Launchpad Solutions was seamless. Their strategic insight and execution made this partnership both successful and impactful for our community.",
+    author: "Michael Comuzzi",
+    role: "President, Lakehead Motors Limited",
   },
 ]
 
