@@ -141,29 +141,15 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Trusted By Logos - Inside Hero */}
+            {/* Raised Amount - Inside Hero */}
             <div className="mt-16 animate-reveal" style={{ animationDelay: '0.6s' }}>
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl px-8 py-6 shadow-xl">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                  <p className="text-gray-500 text-sm font-medium tracking-wide uppercase whitespace-nowrap">Trusted by</p>
-
-                  <div className="hidden md:block w-px h-8 bg-gray-200" />
-
-                  <div className="flex items-center gap-6 md:gap-10 flex-wrap justify-center">
-                    <div className="relative h-10 w-28 md:h-11 md:w-32">
-                      <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" fill className="object-contain" />
-                    </div>
-                    <div className="relative h-10 w-28 md:h-11 md:w-32">
-                      <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace" fill className="object-contain" />
-                    </div>
-                    <div className="relative h-10 w-28 md:h-11 md:w-32 hidden sm:block">
-                      <Image src="/images/Rotary House Lottery Testemonial.png" alt="Rotary House Lottery" fill className="object-contain" />
-                    </div>
-                    <div className="relative h-10 w-28 md:h-11 md:w-32 hidden lg:block">
-                      <Image src="/images/J&J.png" alt="J&J" fill className="object-contain" />
-                    </div>
-                  </div>
+              <div className="text-center">
+                <div className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none text-white [text-shadow:_0_4px_20px_rgba(233,30,140,0.3),_0_8px_40px_rgba(255,140,0,0.2)]">
+                  <CountUpNumber />
                 </div>
+                <p className="text-xl sm:text-2xl font-medium text-gray-300 mt-4 tracking-wide">
+                  raised for our partners
+                </p>
               </div>
             </div>
           </div>
@@ -184,55 +170,6 @@ export default function Home() {
         <div className="absolute bottom-[45%] right-[25%] w-2 h-2 rounded-full bg-yellow-300/55 animate-particle" style={{ animationDelay: '6s' }} />
         <div className="absolute top-[55%] right-[35%] w-1.5 h-1.5 rounded-full bg-pink-400/45 animate-particle" style={{ animationDelay: '6.5s' }} />
       </section>
-
-      {/* Stats Section - Dramatic Count-Up */}
-      <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-purple-900 via-pink-800 to-orange-700">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-violet-900/50 via-transparent to-amber-600/30" />
-          <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-orange-500/30 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-pink-500/20 rounded-full blur-3xl" />
-        </div>
-
-        {/* Floating particles */}
-        <div className="absolute top-[15%] left-[10%] w-2 h-2 rounded-full bg-pink-300/60 animate-particle" />
-        <div className="absolute top-[25%] right-[15%] w-3 h-3 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute bottom-[20%] left-[20%] w-2 h-2 rounded-full bg-yellow-300/55 animate-particle" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-[40%] right-[10%] w-2.5 h-2.5 rounded-full bg-pink-400/50 animate-particle" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute bottom-[30%] right-[25%] w-2 h-2 rounded-full bg-orange-400/45 animate-particle" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-[20%] left-[30%] w-1.5 h-1.5 rounded-full bg-yellow-400/60 animate-particle" style={{ animationDelay: '2.5s' }} />
-        <div className="absolute bottom-[15%] right-[35%] w-2 h-2 rounded-full bg-pink-300/55 animate-particle" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-[60%] left-[15%] w-1.5 h-1.5 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '3.5s' }} />
-        <div className="absolute bottom-[40%] left-[35%] w-2 h-2 rounded-full bg-yellow-300/45 animate-particle" style={{ animationDelay: '4s' }} />
-        <div className="absolute top-[35%] right-[30%] w-1.5 h-1.5 rounded-full bg-pink-400/55 animate-particle" style={{ animationDelay: '4.5s' }} />
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            {/* The big number */}
-            <div className="mb-6 animate-on-scroll">
-              <div className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white [text-shadow:_0_4px_20px_rgba(0,0,0,0.2),_0_8px_40px_rgba(0,0,0,0.15)]">
-                <CountUpNumber />
-              </div>
-            </div>
-
-            {/* Subtitle */}
-            <div className="animate-on-scroll animate-delay-200">
-              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/90 tracking-wide">
-                raised for our partners
-              </p>
-            </div>
-
-            {/* Decorative accent */}
-            <div className="mt-8 flex justify-center animate-on-scroll animate-delay-300">
-              <div className="w-24 h-1.5 rounded-full bg-white/40" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Full-width divider line */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
       {/* Features Section */}
       <section className="py-24 section-gradient">
