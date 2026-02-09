@@ -5,7 +5,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --gradient-brand: linear-gradient(135deg, #E91E8C 0%, #FF8C00 50%, #FFD700 100%);
+  /* Launchpad Design Tokens */
+  --text-primary: #0A2540;
+  --text-secondary: #425466;
+  --text-muted: #6B7C93;
+  --bg-primary: #FFFFFF;
+  --bg-alt: #F6F9FC;
+  --border: #E3E8EE;
+  --danger: #DF1B41;
+  --success: #30B130;
+  --cta: #0570DE;
+  --cta-hover: #2490FF;
+  --brand-start: #0A2540;
+  --brand-mid: #0570DE;
+  --brand-end: #12D8FA;
+  --gradient-brand: linear-gradient(135deg, #0A2540 0%, #0570DE 50%, #12D8FA 100%);
 }
 
 * {
@@ -26,7 +40,7 @@ body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: var(--gradient-brand);
+  background: linear-gradient(90deg, var(--cta) 0%, var(--brand-end) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,20 +80,22 @@ section {
 /* Button hover effects */
 .btn-primary {
   @apply px-8 py-4 rounded-full font-semibold text-white transition-all duration-300;
-  background: var(--gradient-brand);
+  background: var(--cta);
 }
 
 .btn-primary:hover {
+  background: var(--cta-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 40px rgba(233, 30, 140, 0.3);
+  box-shadow: 0 10px 40px rgba(5, 112, 222, 0.3);
 }
 
 .btn-secondary {
-  @apply px-8 py-4 rounded-full font-semibold border-2 border-gray-200 text-gray-800 transition-all duration-300 bg-white;
+  @apply px-8 py-4 rounded-full font-semibold border-2 text-gray-800 transition-all duration-300 bg-white;
+  border-color: var(--border);
 }
 
 .btn-secondary:hover {
-  @apply border-gray-300;
+  border-color: #c5cdd8;
   transform: translateY(-2px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
@@ -104,9 +120,9 @@ section {
   @apply text-gray-900;
 }
 
-/* Hero section background - dark dramatic style */
+/* Hero section background - Stripe-style light with gradient mesh */
 .hero-gradient {
-  background: linear-gradient(180deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+  background: var(--bg-primary);
   position: relative;
   overflow: hidden;
 }
@@ -114,25 +130,40 @@ section {
 .hero-gradient::before {
   content: '';
   position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 70%;
+  height: 140%;
+  background:
+    radial-gradient(ellipse 60% 50% at 60% 30%, rgba(255, 107, 53, 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 70% 60%, rgba(233, 30, 140, 0.4) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 80% 40%, rgba(180, 80, 255, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 50% 70%, rgba(18, 216, 250, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(255, 170, 50, 0.5) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-gradient::after {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(233, 30, 140, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(255, 140, 0, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 30% at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 35%, rgba(255,255,255,0) 55%);
   pointer-events: none;
+  z-index: 1;
 }
 
 /* Section backgrounds */
 .section-gradient {
-  background: linear-gradient(180deg, transparent 0%, rgba(233, 30, 140, 0.02) 50%, transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 112, 222, 0.03) 50%, transparent 100%);
 }
 
 /* Sticky announcement banner */
 .announcement-banner {
-  background: var(--gradient-brand);
+  background: var(--cta);
   color: white;
   font-weight: 600;
   font-size: 0.9rem;
@@ -174,8 +205,8 @@ section {
 
 /* Pulse glow animation */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(233, 30, 140, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(233, 30, 140, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(5, 112, 222, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(5, 112, 222, 0.6); }
 }
 
 .animate-pulse-glow {
@@ -279,9 +310,9 @@ section {
 /* Text glow effect */
 .text-glow {
   text-shadow:
-    0 0 20px rgba(233, 30, 140, 0.5),
-    0 0 40px rgba(233, 30, 140, 0.3),
-    0 0 60px rgba(255, 140, 0, 0.2);
+    0 0 20px rgba(5, 112, 222, 0.3),
+    0 0 40px rgba(5, 112, 222, 0.2),
+    0 0 60px rgba(18, 216, 250, 0.15);
 }
 
 /* Orbit animation */
