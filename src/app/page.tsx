@@ -122,53 +122,50 @@ export default function Home() {
     <div className="pt-24" ref={animationRef}>
       {/* Hero Section */}
       <section className="hero-gradient min-h-[90vh] flex items-center relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 animate-reveal">
-              <span className="gradient-text animate-shimmer">Unleash Your</span>
-              <br />
-              <span className="text-white text-glow">Fundraising Potential</span>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 relative z-10 w-full">
+          <div className="max-w-2xl">
+            {/* Stat label */}
+            <div className="flex items-center gap-3 mb-8 animate-reveal">
+              <span className="text-[#6B7C93] text-sm font-medium tracking-wide">Total funds raised through our programs:</span>
+              <span className="text-[#0A2540] text-sm font-semibold tabular-nums">
+                <CountUpNumber />
+              </span>
+            </div>
+
+            <h1 className="text-[40px] md:text-[52px] lg:text-[66px] font-bold tracking-tight leading-[1.1] mb-8 animate-reveal" style={{ animationDelay: '0.1s' }}>
+              <span className="text-[#0A2540]">Fundraising infrastructure to </span>
+              <span className="gradient-text">grow your impact.</span>
+              {' '}
+              <span className="text-[#425466]">
+                Manage raffles, ensure compliance and run transparent campaigns &ndash; from your first draw to your thousandth.
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed animate-reveal" style={{ animationDelay: '0.2s' }}>
-              Experts in raffle management and charitable gaming solutions, trusted by nonprofits to run high-performing, transparent programs from start to finish.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-reveal" style={{ animationDelay: '0.4s' }}>
-              <Link href="/contact" className="btn-primary text-lg animate-pulse-glow">
-                Schedule a Consultation
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-reveal" style={{ animationDelay: '0.3s' }}>
+              <Link href="/contact" className="btn-primary text-base inline-flex items-center gap-2 group">
+                Get started
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
-              <Link href="/services" className="btn-secondary text-lg !bg-white/10 !border-white/30 !text-white hover:!bg-white/20">
+              <Link href="/services" className="btn-secondary text-base inline-flex items-center gap-2">
                 Explore Services
               </Link>
             </div>
-
-            {/* Raised Amount - Inside Hero */}
-            <div className="mt-16 animate-reveal" style={{ animationDelay: '0.6s' }}>
-              <div className="text-center">
-                <div className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none text-white [text-shadow:_0_4px_20px_rgba(233,30,140,0.3),_0_8px_40px_rgba(255,140,0,0.2)]">
-                  <CountUpNumber />
-                </div>
-                <p className="text-xl sm:text-2xl font-medium text-gray-300 mt-4 tracking-wide">
-                  raised for our partners
-                </p>
-              </div>
-            </div>
           </div>
         </div>
-        {/* Floating particles */}
-        <div className="absolute top-1/4 left-[15%] w-2 h-2 rounded-full bg-pink-400/70 animate-particle" />
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-pink-400/60 animate-particle" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute top-2/3 left-1/3 w-2 h-2 rounded-full bg-orange-400/60 animate-particle" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-1/4 right-1/3 w-3 h-3 rounded-full bg-yellow-400/50 animate-particle" style={{ animationDelay: '4s' }} />
-        <div className="absolute top-1/4 right-1/3 w-2 h-2 rounded-full bg-pink-300/70 animate-particle" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-1/3 left-1/4 w-2 h-2 rounded-full bg-orange-300/60 animate-particle" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-[20%] right-[20%] w-1.5 h-1.5 rounded-full bg-yellow-300/70 animate-particle" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-[45%] left-[10%] w-2 h-2 rounded-full bg-pink-500/50 animate-particle" style={{ animationDelay: '2.5s' }} />
-        <div className="absolute bottom-[20%] right-[15%] w-2.5 h-2.5 rounded-full bg-orange-400/55 animate-particle" style={{ animationDelay: '3.5s' }} />
-        <div className="absolute top-[60%] right-[10%] w-1.5 h-1.5 rounded-full bg-yellow-400/60 animate-particle" style={{ animationDelay: '4.5s' }} />
-        <div className="absolute bottom-[35%] left-[20%] w-2 h-2 rounded-full bg-pink-300/65 animate-particle" style={{ animationDelay: '5s' }} />
-        <div className="absolute top-[35%] left-[40%] w-1.5 h-1.5 rounded-full bg-orange-300/50 animate-particle" style={{ animationDelay: '5.5s' }} />
-        <div className="absolute bottom-[45%] right-[25%] w-2 h-2 rounded-full bg-yellow-300/55 animate-particle" style={{ animationDelay: '6s' }} />
-        <div className="absolute top-[55%] right-[35%] w-1.5 h-1.5 rounded-full bg-pink-400/45 animate-particle" style={{ animationDelay: '6.5s' }} />
+      </section>
+
+      {/* Trusted-by logo bar */}
+      <section className="border-t border-b py-8" style={{ borderColor: 'var(--border)' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 grayscale">
+            <span className="text-lg font-semibold text-[#425466] tracking-wide">Thunder Bay Regional Health Sciences Foundation</span>
+            <span className="text-lg font-semibold text-[#425466] tracking-wide">Fort William Rotary Club</span>
+            <span className="text-lg font-semibold text-[#425466] tracking-wide">Lakehead Motors</span>
+            <span className="text-lg font-semibold text-[#425466] tracking-wide">Cruising For a Cure</span>
+          </div>
+        </div>
       </section>
 
       {/* Features Section */}
@@ -241,11 +238,11 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden" style={{ background: 'var(--brand-start)' }}>
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
         </div>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -255,7 +252,7 @@ export default function Home() {
             Book a free 30-minute consultation and discover how Launchpad Solutions
             can help you reach your fundraising goals.
           </p>
-          <Link href="/contact" className="btn-primary text-lg animate-pulse-glow">
+          <Link href="/contact" className="btn-primary text-lg">
             Get Your Free Consultation
           </Link>
         </div>
@@ -275,7 +272,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className={`card card-3d animate-on-scroll animate-delay-${(index + 1) * 100}`}>
-                <svg className="w-8 h-8 text-pink-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
