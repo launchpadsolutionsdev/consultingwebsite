@@ -2,16 +2,12 @@ import Link from 'next/link'
 
 const footerLinks = {
   company: [
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' },
-  ],
-  services: [
-    { name: 'Lift-Off Package', href: '/services#lift-off' },
-    { name: 'Mission Control', href: '/services#mission-control' },
-    { name: 'Custom Support', href: '/services#custom-support' },
-    { name: 'Free Consultation', href: '/contact' },
+    { name: 'Home', href: '/#' },
+    { name: 'Success Stories', href: '/#success-stories' },
+    { name: 'About', href: '/#about' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Lightspeed', href: '/#lightspeed' },
+    { name: 'Contact', href: '/#contact' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -24,7 +20,7 @@ export default function Footer() {
     <footer className="bg-gray-50 border-t border-gray-100">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center mb-6">
@@ -45,20 +41,6 @@ export default function Footer() {
             <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-gray-600 hover:text-gray-900 transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services Links */}
-          <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Services</h4>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-gray-600 hover:text-gray-900 transition-colors">
                     {link.name}
