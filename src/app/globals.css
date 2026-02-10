@@ -362,3 +362,53 @@ section {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Lightspeed warm gradient background */
+.lightspeed-gradient {
+  background: linear-gradient(135deg, #FFF8F3 0%, #FFE8E0 25%, #FFD4CE 50%, #F5C6D0 75%, #E8B4C8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.lightspeed-gradient::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 80%;
+  height: 160%;
+  background:
+    radial-gradient(ellipse 50% 50% at 30% 40%, rgba(255, 180, 150, 0.4) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 70% 30%, rgba(255, 120, 100, 0.3) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 70%, rgba(220, 100, 140, 0.25) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Lightspeed gradient text */
+.lightspeed-text {
+  background: linear-gradient(135deg, #FF6B35 0%, #E91E8C 50%, #B450FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Floating UI card animation */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-float-gentle-delayed {
+  animation: float-gentle 5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-float-gentle-slow {
+  animation: float-gentle 7s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
