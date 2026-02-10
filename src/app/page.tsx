@@ -79,36 +79,50 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-gradient min-h-[90vh] flex items-center relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16 lg:pt-32 lg:pb-24 relative z-10 w-full">
-          <div className="max-w-2xl">
-            <h1 className="text-[38px] md:text-[48px] lg:text-[60px] font-bold tracking-tight leading-[1.1] mb-6 animate-reveal">
-              <span className="text-[#0A2540]">Fundraising infrastructure to </span>
-              <span className="gradient-text">grow your impact.</span>
-              {' '}
-              <span className="text-[#425466]">
-                Experts in raffle management and charitable gaming solutions, trusted to run high-performing programs from start to finish.
-              </span>
-            </h1>
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="max-w-2xl lg:flex-1">
+              <h1 className="text-[38px] md:text-[48px] lg:text-[60px] font-bold tracking-tight leading-[1.1] mb-6 animate-reveal">
+                <span className="text-[#0A2540]">Fundraising infrastructure to </span>
+                <span className="gradient-text">grow your impact.</span>
+                {' '}
+                <span className="text-[#425466]">
+                  Experts in raffle management and charitable gaming solutions, trusted to run high-performing programs from start to finish.
+                </span>
+              </h1>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12 animate-reveal" style={{ animationDelay: '0.2s' }}>
-              <Link href="/contact" className="btn-primary text-base inline-flex items-center gap-2 group">
-                Get started
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link href="/services" className="btn-secondary text-base inline-flex items-center gap-2">
-                Explore Services
-              </Link>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12 animate-reveal" style={{ animationDelay: '0.2s' }}>
+                <Link href="/contact" className="btn-primary text-base inline-flex items-center gap-2 group">
+                  Get started
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link href="/services" className="btn-secondary text-base inline-flex items-center gap-2">
+                  Explore Services
+                </Link>
+              </div>
+
+              {/* Testimonial quote */}
+              <div className="max-w-xl animate-reveal" style={{ animationDelay: '0.4s' }}>
+                <p className="text-[#425466] text-base leading-relaxed italic">
+                  &ldquo;Launchpad Solutions doesn&rsquo;t just advise &mdash; they deliver. Their expertise has been instrumental in making our 50/50 one of the most successful hospital lotteries in Canada.&rdquo;
+                </p>
+                <p className="text-[#0A2540] text-sm font-semibold mt-3">
+                  &mdash;Glenn Craig, President &amp; CEO, Thunder Bay Regional Health Sciences Foundation
+                </p>
+              </div>
             </div>
 
-            {/* Testimonial quote */}
-            <div className="max-w-xl animate-reveal" style={{ animationDelay: '0.4s' }}>
-              <p className="text-[#425466] text-base leading-relaxed italic">
-                &ldquo;Launchpad Solutions doesn&rsquo;t just advise &mdash; they deliver. Their expertise has been instrumental in making our 50/50 one of the most successful hospital lotteries in Canada.&rdquo;
-              </p>
-              <p className="text-[#0A2540] text-sm font-semibold mt-3">
-                &mdash;Glenn Craig, President &amp; CEO, Thunder Bay Regional Health Sciences Foundation
-              </p>
+            {/* Hero image */}
+            <div className="lg:flex-1 w-full max-w-md lg:max-w-none animate-reveal" style={{ animationDelay: '0.3s' }}>
+              <Image
+                src="/images/nat-clem-hero-placement.jpg"
+                alt="Natalie & Clem Bigras holding their $6,436,355 Thunder Bay 50/50 grand prize cheque"
+                width={600}
+                height={750}
+                className="rounded-2xl shadow-2xl w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>
