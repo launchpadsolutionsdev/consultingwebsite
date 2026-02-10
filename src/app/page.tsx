@@ -597,6 +597,150 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Try Lightspeed Section */}
+      <section className="lightspeed-gradient py-20 lg:py-24 relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+            {/* Left column — copy */}
+            <div className="lg:flex-1 lg:pt-8 animate-on-scroll">
+              <p className="text-sm font-medium text-[#6B7C93] mb-6">AI-powered solutions for real-world challenges</p>
+              <h2 className="text-3xl md:text-4xl lg:text-[48px] font-bold leading-[1.1] tracking-tight text-[#0A2540] mb-6">
+                Try{' '}<span className="lightspeed-text">Lightspeed</span>
+              </h2>
+              <p className="text-[17px] md:text-lg text-[#425466] leading-relaxed mb-8">
+                Lightspeed is a full suite of purpose-built AI-powered tools, born out of necessity. Lightspeed gets smarter the more you use it. It never forgets anything, and it&rsquo;s always ready to help you tackle customer service, data normalization&mdash;anything you need to get done, fast.
+              </p>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <a
+                  href="https://www.lightspeedutility.ca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all duration-300 hover:opacity-90 group"
+                  style={{ background: 'linear-gradient(135deg, #4BA0F4 0%, #3B82D4 100%)' }}
+                >
+                  Get started
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.lightspeedutility.ca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border border-gray-300 text-[#0A2540] bg-white transition-all duration-300 hover:bg-gray-50"
+                >
+                  Sign up with Google
+                </a>
+              </div>
+            </div>
+
+            {/* Right column — Lightspeed UI recreation */}
+            <div className="lg:flex-1 w-full animate-on-scroll animate-delay-200">
+              <div className="flex flex-col gap-4">
+                {/* Main dashboard card */}
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-200/60 p-6">
+                  <p className="text-lg font-bold text-[#0A2540] mb-0.5">Good afternoon, Torin.</p>
+                  <p className="text-sm text-[#6B7C93] mb-5">What would you like to work on?</p>
+
+                  {/* Top row — two feature cards */}
+                  <div className="grid grid-cols-2 gap-3 mb-3">
+                    {/* Response Assistant */}
+                    <div className="bg-white rounded-xl p-4 border border-gray-200/80 shadow-sm">
+                      <div className="flex items-center gap-2 mb-2.5">
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm" style={{ background: 'linear-gradient(135deg, #3B82F6, #06B6D4)' }}>&#x26A1;</div>
+                        <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
+                      </div>
+                      <p className="text-[13px] font-bold text-[#0A2540] mb-1">Response Assistant</p>
+                      <p className="text-[11px] text-[#6B7C93] leading-snug mb-3">Generate professional, AI-powered responses to customer inquiries. Customize tone, length, and format. Includes knowledge base, analytics, and quick reply templates.</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Smart Replies</span>
+                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Knowledge Base</span>
+                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Analytics</span>
+                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Templates</span>
+                      </div>
+                    </div>
+
+                    {/* Draft Assistant */}
+                    <div className="bg-white rounded-xl p-4 border border-gray-200/80 shadow-sm">
+                      <div className="flex items-center gap-2 mb-2.5">
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>&#x270F;&#xFE0F;</div>
+                        <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
+                      </div>
+                      <p className="text-[13px] font-bold text-[#0A2540] mb-1">Draft Assistant</p>
+                      <p className="text-[11px] text-[#6B7C93] leading-snug mb-3">Create on-brand social posts, emails, media releases, and ads.</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Social</span>
+                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Email</span>
+                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Media</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom row — two smaller cards */}
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    {/* Insights Engine */}
+                    <div className="bg-white rounded-xl p-3.5 border border-gray-200/80 shadow-sm">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs" style={{ background: 'linear-gradient(135deg, #22C55E, #06B6D4)' }}>&#x1F4CA;</div>
+                        <span className="text-[9px] font-bold text-white px-1.5 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
+                      </div>
+                      <p className="text-xs font-bold text-[#0A2540] mb-0.5">Insights Engine</p>
+                      <p className="text-[10px] text-[#6B7C93] leading-snug mb-2">Upload data and generate visual dashboards instantly.</p>
+                      <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Analytics</span>
+                    </div>
+
+                    {/* List Normalizer */}
+                    <div className="bg-white rounded-xl p-3.5 border border-gray-200/80 shadow-sm">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs" style={{ background: 'linear-gradient(135deg, #F97316, #FBBF24)' }}>&#x1F4CB;</div>
+                        <span className="text-[9px] font-bold text-white px-1.5 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
+                      </div>
+                      <p className="text-xs font-bold text-[#0A2540] mb-0.5">List Normalizer</p>
+                      <p className="text-[10px] text-[#6B7C93] leading-snug mb-2">Clean and format customer lists for Mailchimp export.</p>
+                      <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Data Export</span>
+                    </div>
+                  </div>
+
+                  {/* Green CTA button */}
+                  <button className="w-full py-3 rounded-xl font-semibold text-white text-sm transition-all duration-300 hover:opacity-90" style={{ background: 'linear-gradient(135deg, #22C55E 0%, #06B6D4 100%)' }}>
+                    Open Response Assistant &rarr;
+                  </button>
+                </div>
+
+                {/* Ask Lightspeed chat bar */}
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-200/60 p-5">
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <span className="text-sm">&#x2728;</span>
+                    <span className="text-sm font-bold text-[#0A2540]">Ask Lightspeed</span>
+                    <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #22C55E, #06B6D4)' }}>AI Assistant</span>
+                    <div className="ml-auto flex gap-1.5">
+                      <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>Professional</span>
+                      <span className="text-[10px] text-[#6B7C93] px-2 py-0.5 rounded-full border border-gray-200 bg-white">Friendly</span>
+                      <span className="text-[10px] text-[#6B7C93] px-2 py-0.5 rounded-full border border-gray-200 bg-white">Casual</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Draft a professional email to a corporate sponsor</span>
+                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Suggest some calls-to-action for our website</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Help me brainstorm social media content ideas for this month</span>
+                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Write a short blurb about where lottery funds go</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="flex-1 bg-[#F9FAFB] rounded-full px-4 py-2.5 text-sm text-[#9CA3AF] border border-gray-200">Ask anything...</div>
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-white" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </div>
+                  </div>
+                  <p className="text-[10px] text-[#9CA3AF] text-center mt-2">AI-generated responses. Always verify important information.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Us Section */}
       <ContactSection />
     </div>
