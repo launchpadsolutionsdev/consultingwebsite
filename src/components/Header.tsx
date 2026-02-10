@@ -4,12 +4,12 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Success Stories', href: '/success-stories' },
-  { name: 'Services', href: '/services' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Home', href: '/#' },
+  { name: 'Success Stories', href: '/#success-stories' },
+  { name: 'About', href: '/#about' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Lightspeed', href: '/#lightspeed' },
+  { name: 'Contact', href: '/#contact' },
 ]
 
 export default function Header() {
@@ -42,7 +42,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/#contact"
               className="btn-primary !px-6 !py-2.5 !rounded-full"
             >
               Get Started
@@ -83,7 +83,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="/#contact"
                 className="btn-primary text-center !px-6 !py-2.5 !rounded-full mt-4"
                 onClick={() => setMobileMenuOpen(false)}
               >

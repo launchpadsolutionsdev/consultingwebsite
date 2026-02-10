@@ -93,7 +93,7 @@ function ContactSection() {
   }
 
   return (
-    <section className="py-20 bg-[#0A2540] relative overflow-hidden">
+    <section id="contact" className="py-20 bg-[#0A2540] relative overflow-hidden scroll-mt-20">
       {/* Subtle background elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
@@ -293,13 +293,13 @@ export default function Home() {
               </h1>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12 animate-reveal" style={{ animationDelay: '0.2s' }}>
-                <Link href="/contact" className="btn-primary text-base inline-flex items-center gap-2 group">
+                <Link href="/#contact" className="btn-primary text-base inline-flex items-center gap-2 group">
                   Get started
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
-                <Link href="/services" className="btn-secondary text-base inline-flex items-center gap-2">
+                <Link href="/#services" className="btn-secondary text-base inline-flex items-center gap-2">
                   Explore Services
                 </Link>
               </div>
@@ -344,7 +344,7 @@ export default function Home() {
       </section>
 
       {/* Bold Intro + Success Stories Bento Grid */}
-      <section className="py-20 bg-white">
+      <section id="success-stories" className="py-20 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Bold intro statement */}
           <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.15] tracking-tight text-[#0A2540] mb-16 animate-on-scroll">
@@ -429,7 +429,7 @@ export default function Home() {
       </section>
 
       {/* Why Launchpad Exists */}
-      <section className="hero-gradient py-20 relative">
+      <section id="about" className="hero-gradient py-20 relative scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           {/* Section heading — matches bold intro style */}
           <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.15] tracking-tight text-[#0A2540] mb-16 animate-on-scroll">
@@ -502,7 +502,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 section-gradient">
+      <section id="services" className="py-20 section-gradient scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Intro statement */}
           <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.15] tracking-tight text-[#0A2540] mb-16 animate-on-scroll">
@@ -585,7 +585,7 @@ export default function Home() {
                 <p className="text-[#425466] text-sm leading-relaxed mb-5">
                   We&rsquo;ll walk through where you&rsquo;re at, what you&rsquo;re trying to achieve, and where Launchpad can fit in. Book a free 30-minute consult&mdash;no pressure, just real advice.
                 </p>
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-[#0570DE] text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-[#2490FF] transition-all duration-300 group">
+                <Link href="/#contact" className="inline-flex items-center gap-2 bg-[#0570DE] text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-[#2490FF] transition-all duration-300 group">
                   Book a free consultation
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -598,7 +598,7 @@ export default function Home() {
       </section>
 
       {/* Try Lightspeed Section */}
-      <section className="lightspeed-gradient py-20 lg:py-24 relative">
+      <section id="lightspeed" className="lightspeed-gradient py-20 lg:py-24 relative scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
             {/* Left column — copy */}
