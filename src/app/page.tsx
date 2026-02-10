@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const articles = [
   {
@@ -64,23 +64,214 @@ function useScrollAnimation() {
 }
 
 
-const testimonials = [
-  {
-    quote: "Launchpad Solutions has been instrumental in the success of our Thunder Bay 50/50 and Catch the Ace lotteries. Their deep expertise and hands-on approach have helped us scale responsibly while maintaining trust, transparency, and exceptional performance.",
-    author: "Glenn Craig",
-    role: "President, Thunder Bay Regional Health Sciences Foundation",
-  },
-  {
-    quote: "Launchpad Solutions gave our House Lottery the structure and confidence we needed to succeed. Their team guided us every step of the way with professionalism and a deep understanding of charitable gaming.",
-    author: "Cindy Levanto",
-    role: "Fort William Rotary Club of Thunder Bay",
-  },
-  {
-    quote: "Launching the Cruising For a Cure Pink Jeep Raffle with Launchpad Solutions was seamless. Their strategic insight and execution made this partnership both successful and impactful for our community.",
-    author: "Michael Comuzzi",
-    role: "President, Lakehead Motors Limited",
-  },
+const contactServices = [
+  'Lift-Off Package',
+  'Mission Control',
+  'Custom Support',
+  'Free Consultation',
+  'Other',
 ]
+
+function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    organization: '',
+    service: '',
+    message: '',
+  })
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+    setSubmitted(true)
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  return (
+    <section className="py-20 bg-[#0A2540] relative overflow-hidden">
+      {/* Subtle background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-cyan-400/15 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left column — copy + contact info */}
+          <div className="animate-on-scroll">
+            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.15] tracking-tight text-white mb-6">
+              Ready to unleash your{' '}
+              <span className="gradient-text">fundraising potential?</span>
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed mb-10">
+              Book a free 30-minute consultation and discover how Launchpad Solutions can help your organization build a high-performing raffle program&mdash;without having to figure it all out on your own.
+            </p>
+
+            {/* Contact methods */}
+            <div className="space-y-6 mb-10">
+              <a href="mailto:hello@launchpadsolutions.com" className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
+                  <svg className="w-5 h-5 text-[#12D8FA]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-0.5">Email Us</p>
+                  <p className="text-[#12D8FA] text-sm group-hover:underline">hello@launchpadsolutions.com</p>
+                </div>
+              </a>
+
+              <a href="tel:+15551234567" className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
+                  <svg className="w-5 h-5 text-[#12D8FA]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-0.5">Call Us</p>
+                  <p className="text-[#12D8FA] text-sm group-hover:underline">(555) 123-4567</p>
+                </div>
+              </a>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-[#12D8FA]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-0.5">Location</p>
+                  <p className="text-gray-400 text-sm">Based in Canada &mdash; serving organizations nationwide</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust line */}
+            <p className="text-sm text-gray-500 leading-relaxed">
+              We typically respond within 1 business day. Your information is never shared with third parties.
+            </p>
+          </div>
+
+          {/* Right column — form */}
+          <div className="animate-on-scroll animate-delay-200">
+            <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-2xl">
+              {submitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 rounded-full bg-[#30B130]/10 flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-8 h-8 text-[#30B130]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#0A2540] mb-3">Thank you!</h3>
+                  <p className="text-[#425466] mb-8">
+                    We&rsquo;ve received your message and will get back to you within 1&ndash;2 business days.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSubmitted(false)
+                      setFormData({ name: '', email: '', organization: '', service: '', message: '' })
+                    }}
+                    className="text-[#0570DE] font-semibold hover:underline"
+                  >
+                    Send another message
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-[#0A2540] mb-1">Send us a message</h3>
+                  <p className="text-sm text-[#6B7C93] mb-6">Fill out the form and we&rsquo;ll be in touch shortly.</p>
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="contact-name" className="block text-sm font-medium text-[#0A2540] mb-1.5">Name *</label>
+                        <input
+                          type="text"
+                          id="contact-name"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="w-full px-4 py-2.5 border border-[#E3E8EE] rounded-lg text-sm text-[#0A2540] placeholder-[#6B7C93] focus:ring-2 focus:ring-[#0570DE] focus:border-transparent transition-all outline-none"
+                          placeholder="John Smith"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="contact-email" className="block text-sm font-medium text-[#0A2540] mb-1.5">Email *</label>
+                        <input
+                          type="email"
+                          id="contact-email"
+                          name="email"
+                          required
+                          value={formData.email}
+                          onChange={handleChange}
+                          className="w-full px-4 py-2.5 border border-[#E3E8EE] rounded-lg text-sm text-[#0A2540] placeholder-[#6B7C93] focus:ring-2 focus:ring-[#0570DE] focus:border-transparent transition-all outline-none"
+                          placeholder="john@organization.com"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="contact-org" className="block text-sm font-medium text-[#0A2540] mb-1.5">Organization</label>
+                      <input
+                        type="text"
+                        id="contact-org"
+                        name="organization"
+                        value={formData.organization}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-[#E3E8EE] rounded-lg text-sm text-[#0A2540] placeholder-[#6B7C93] focus:ring-2 focus:ring-[#0570DE] focus:border-transparent transition-all outline-none"
+                        placeholder="Your Organization"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="contact-service" className="block text-sm font-medium text-[#0A2540] mb-1.5">What are you interested in?</label>
+                      <select
+                        id="contact-service"
+                        name="service"
+                        value={formData.service}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-[#E3E8EE] rounded-lg text-sm text-[#0A2540] focus:ring-2 focus:ring-[#0570DE] focus:border-transparent transition-all outline-none bg-white"
+                      >
+                        <option value="">Select a service</option>
+                        {contactServices.map((s) => (
+                          <option key={s} value={s}>{s}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="contact-message" className="block text-sm font-medium text-[#0A2540] mb-1.5">Message *</label>
+                      <textarea
+                        id="contact-message"
+                        name="message"
+                        required
+                        rows={4}
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-[#E3E8EE] rounded-lg text-sm text-[#0A2540] placeholder-[#6B7C93] focus:ring-2 focus:ring-[#0570DE] focus:border-transparent transition-all outline-none resize-none"
+                        placeholder="Tell us about your organization and what you're looking to achieve..."
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full py-3 rounded-lg font-semibold text-white text-sm transition-all duration-300 hover:opacity-90"
+                      style={{ background: 'var(--cta)' }}
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default function Home() {
   const animationRef = useScrollAnimation()
@@ -406,198 +597,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Try Lightspeed Section */}
-      <section className="lightspeed-gradient py-20 lg:py-24 relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-            {/* Left column — copy */}
-            <div className="lg:flex-1 lg:pt-8 animate-on-scroll">
-              <p className="text-sm font-medium text-[#6B7C93] mb-6">AI-powered solutions for real-world challenges</p>
-              <h2 className="text-3xl md:text-4xl lg:text-[48px] font-bold leading-[1.1] tracking-tight text-[#0A2540] mb-6">
-                Try{' '}<span className="lightspeed-text">Lightspeed</span>
-              </h2>
-              <p className="text-[17px] md:text-lg text-[#425466] leading-relaxed mb-8">
-                Lightspeed is a full suite of purpose-built AI-powered tools, born out of necessity. Lightspeed gets smarter the more you use it. It never forgets anything, and it&rsquo;s always ready to help you tackle customer service, data normalization&mdash;anything you need to get done, fast.
-              </p>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <a
-                  href="https://www.lightspeedutility.ca"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all duration-300 hover:opacity-90 group"
-                  style={{ background: 'linear-gradient(135deg, #4BA0F4 0%, #3B82D4 100%)' }}
-                >
-                  Get started
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.lightspeedutility.ca"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border border-gray-300 text-[#0A2540] bg-white transition-all duration-300 hover:bg-gray-50"
-                >
-                  Sign up with Google
-                </a>
-              </div>
-            </div>
-
-            {/* Right column — Lightspeed UI recreation */}
-            <div className="lg:flex-1 w-full animate-on-scroll animate-delay-200">
-              <div className="flex flex-col gap-4">
-                {/* Main dashboard card */}
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-200/60 p-6">
-                  <p className="text-lg font-bold text-[#0A2540] mb-0.5">Good afternoon, Torin.</p>
-                  <p className="text-sm text-[#6B7C93] mb-5">What would you like to work on?</p>
-
-                  {/* Top row — two feature cards */}
-                  <div className="grid grid-cols-2 gap-3 mb-3">
-                    {/* Response Assistant */}
-                    <div className="bg-white rounded-xl p-4 border border-gray-200/80 shadow-sm">
-                      <div className="flex items-center gap-2 mb-2.5">
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm" style={{ background: 'linear-gradient(135deg, #3B82F6, #06B6D4)' }}>&#x26A1;</div>
-                        <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
-                      </div>
-                      <p className="text-[13px] font-bold text-[#0A2540] mb-1">Response Assistant</p>
-                      <p className="text-[11px] text-[#6B7C93] leading-snug mb-3">Generate professional, AI-powered responses to customer inquiries. Customize tone, length, and format. Includes knowledge base, analytics, and quick reply templates.</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Smart Replies</span>
-                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Knowledge Base</span>
-                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Analytics</span>
-                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Templates</span>
-                      </div>
-                    </div>
-
-                    {/* Draft Assistant */}
-                    <div className="bg-white rounded-xl p-4 border border-gray-200/80 shadow-sm">
-                      <div className="flex items-center gap-2 mb-2.5">
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>&#x270F;&#xFE0F;</div>
-                        <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
-                      </div>
-                      <p className="text-[13px] font-bold text-[#0A2540] mb-1">Draft Assistant</p>
-                      <p className="text-[11px] text-[#6B7C93] leading-snug mb-3">Create on-brand social posts, emails, media releases, and ads.</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Social</span>
-                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Email</span>
-                        <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Media</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Bottom row — two smaller cards */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    {/* Insights Engine */}
-                    <div className="bg-white rounded-xl p-3.5 border border-gray-200/80 shadow-sm">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs" style={{ background: 'linear-gradient(135deg, #22C55E, #06B6D4)' }}>&#x1F4CA;</div>
-                        <span className="text-[9px] font-bold text-white px-1.5 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
-                      </div>
-                      <p className="text-xs font-bold text-[#0A2540] mb-0.5">Insights Engine</p>
-                      <p className="text-[10px] text-[#6B7C93] leading-snug mb-2">Upload data and generate visual dashboards instantly.</p>
-                      <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Analytics</span>
-                    </div>
-
-                    {/* List Normalizer */}
-                    <div className="bg-white rounded-xl p-3.5 border border-gray-200/80 shadow-sm">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs" style={{ background: 'linear-gradient(135deg, #F97316, #FBBF24)' }}>&#x1F4CB;</div>
-                        <span className="text-[9px] font-bold text-white px-1.5 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>AI-Powered</span>
-                      </div>
-                      <p className="text-xs font-bold text-[#0A2540] mb-0.5">List Normalizer</p>
-                      <p className="text-[10px] text-[#6B7C93] leading-snug mb-2">Clean and format customer lists for Mailchimp export.</p>
-                      <span className="text-[10px] text-[#425466] bg-[#F3F4F6] px-2.5 py-1 rounded-full border border-gray-200">Data Export</span>
-                    </div>
-                  </div>
-
-                  {/* Green CTA button */}
-                  <button className="w-full py-3 rounded-xl font-semibold text-white text-sm transition-all duration-300 hover:opacity-90" style={{ background: 'linear-gradient(135deg, #22C55E 0%, #06B6D4 100%)' }}>
-                    Open Response Assistant &rarr;
-                  </button>
-                </div>
-
-                {/* Ask Lightspeed chat bar */}
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-200/60 p-5">
-                  <div className="flex items-center gap-2 mb-3 flex-wrap">
-                    <span className="text-sm">&#x2728;</span>
-                    <span className="text-sm font-bold text-[#0A2540]">Ask Lightspeed</span>
-                    <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #22C55E, #06B6D4)' }}>AI Assistant</span>
-                    <div className="ml-auto flex gap-1.5">
-                      <span className="text-[10px] font-bold text-white px-2 py-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>Professional</span>
-                      <span className="text-[10px] text-[#6B7C93] px-2 py-0.5 rounded-full border border-gray-200 bg-white">Friendly</span>
-                      <span className="text-[10px] text-[#6B7C93] px-2 py-0.5 rounded-full border border-gray-200 bg-white">Casual</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Draft a professional email to a corporate sponsor</span>
-                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Suggest some calls-to-action for our website</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Help me brainstorm social media content ideas for this month</span>
-                    <span className="text-[11px] text-[#425466] bg-[#F3F4F6] px-3 py-1.5 rounded-full border border-gray-200">Write a short blurb about where lottery funds go</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="flex-1 bg-[#F9FAFB] rounded-full px-4 py-2.5 text-sm text-[#9CA3AF] border border-gray-200">Ask anything...</div>
-                    <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-white" style={{ background: 'linear-gradient(135deg, #F97316, #EF4444)' }}>
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                    </div>
-                  </div>
-                  <p className="text-[10px] text-[#9CA3AF] text-center mt-2">AI-generated responses. Always verify important information.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden" style={{ background: 'var(--brand-start)' }}>
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
-        </div>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Fundraising?
-          </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Book a free 30-minute consultation and discover how Launchpad Solutions
-            can help you reach your fundraising goals.
-          </p>
-          <Link href="/contact" className="btn-primary text-lg">
-            Get Your Free Consultation
-          </Link>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 section-gradient">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Trusted by Organizations Nationwide
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              See what our clients say about working with Launchpad Solutions.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className={`card card-3d animate-on-scroll animate-delay-${(index + 1) * 100}`}>
-                <svg className="w-8 h-8 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div>
-                  <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                  <div className="text-sm text-gray-500">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Contact Us Section */}
+      <ContactSection />
     </div>
   )
 }
