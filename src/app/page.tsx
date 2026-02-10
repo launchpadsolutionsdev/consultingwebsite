@@ -4,6 +4,36 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
+const articles = [
+  {
+    outlet: 'CTV News',
+    logo: '/images/ctv-logo.jpg',
+    headline: 'Timmins man wins $7.7M in Thunder Bay hospital\'s 50/50 draw',
+    excerpt: 'A Timmins man is $7.7 million richer after winning the Thunder Bay Regional Health Sciences Foundation\'s 50/50 draw. The life-changing prize marks another record-breaking moment for the lottery program that has become the largest hospital 50/50 in Canada.',
+    image: '/images/ctv-timmins-man.jpg',
+    imageAlt: 'Timmins man wins $7.7M Thunder Bay 50/50',
+    url: 'https://www.ctvnews.ca/northern-ontario/article/timmins-man-wins-77m-in-thunder-bay-hospitals-5050-draw/',
+  },
+  {
+    outlet: 'CBC News',
+    logo: '/images/cbc-logo.jpg',
+    headline: 'Thunder Bay hospital foundation\'s 50/50 draw breaks records, surpasses $6.4 million',
+    excerpt: 'A couple from the Greater Sudbury community of Hanmer is now $6.4 million richer, after winning the 2024 Thunder Bay Regional Health Sciences Foundation\'s 50/50 draw.',
+    image: '/images/cbc-nat-clem.jpg',
+    imageAlt: 'Natalie and Clem Bigras with their $6.4 million cheque',
+    url: 'https://www.cbc.ca/news/canada/thunder-bay/thunder-bay-hospital-foundation-record-breaking-draw-1.7422793',
+  },
+  {
+    outlet: 'TB Newswatch',
+    logo: '/images/tbnewswatch-logo.jpg',
+    headline: 'Nolalu Man Wins $2.3M 50/50 Grand Prize',
+    excerpt: 'A Nolalu resident is celebrating after winning the Thunder Bay Regional Health Sciences Foundation\'s 50/50 Grand Prize of $2.3 million.',
+    image: '/images/torin-cass-story.jpg',
+    imageAlt: 'Nolalu man wins $2.3M 50/50 Grand Prize',
+    url: 'https://www.tbnewswatch.com/local-news/nolalu-man-wins-23m-5050-grand-prize-11816107',
+  },
+]
+
 const features = [
   {
     icon: '🎯',
@@ -141,71 +171,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 section-gradient">
+      {/* Bold Intro + Success Stories Bento Grid */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              End-to-End Raffle Management
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We can handle every aspect of your charitable gaming campaign,
-              so you can focus on what matters most—your mission.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={feature.title} className={`card card-3d text-center animate-on-scroll animate-delay-${(index + 1) * 100}`}>
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
+          {/* Bold intro statement */}
+          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.15] tracking-tight text-[#0A2540] mb-16 animate-on-scroll">
+            We&rsquo;re experienced raffle managers who have seen it all, run 8-figure campaigns, made every mistake possible, and now, we&rsquo;re ready to help you{' '}
+            <span className="gradient-text">unleash your fundraising potential.</span>
+          </h2>
+
+          {/* Bento grid — 1 on top, 2 on bottom */}
+          <div className="flex flex-col gap-6">
+            {/* Featured article — full width */}
+            <div className="rounded-2xl overflow-hidden bg-[#F6F9FC] border border-[#E3E8EE] animate-on-scroll">
+              <div className="grid lg:grid-cols-2">
+                <div className="relative aspect-[4/3] lg:aspect-auto">
+                  <Image
+                    src={articles[0].image}
+                    alt={articles[0].imageAlt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={articles[0].logo} alt={articles[0].outlet} className="h-7 w-auto mb-6 opacity-70" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#0A2540] mb-4 leading-tight">
+                    &ldquo;{articles[0].headline}&rdquo;
+                  </h3>
+                  <p className="text-[#425466] text-base leading-relaxed mb-8">
+                    {articles[0].excerpt}
+                  </p>
+                  <a
+                    href={articles[0].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[#0570DE] font-semibold hover:underline"
+                  >
+                    Read full article
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Two articles side by side */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {articles.slice(1).map((article, index) => (
+                <div key={article.headline} className={`rounded-2xl overflow-hidden bg-[#F6F9FC] border border-[#E3E8EE] animate-on-scroll animate-delay-${(index + 1) * 100}`}>
+                  <div className="relative aspect-[16/10]">
+                    <Image
+                      src={article.image}
+                      alt={article.imageAlt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6 lg:p-8">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={article.logo} alt={article.outlet} className="h-6 w-auto mb-4 opacity-70" />
+                    <h3 className="text-xl md:text-2xl font-bold text-[#0A2540] mb-3 leading-tight">
+                      &ldquo;{article.headline}&rdquo;
+                    </h3>
+                    <p className="text-[#425466] text-sm leading-relaxed mb-6">
+                      {article.excerpt}
+                    </p>
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#0570DE] font-semibold text-sm hover:underline"
+                    >
+                      Read full article
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-24 bg-white">
+      {/* Features Grid */}
+      <section className="py-20 section-gradient">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How It Works
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A simple, proven process to launch your fundraising campaign.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center animate-on-scroll animate-delay-100">
-              <div className="w-16 h-16 rounded-full bg-gradient-brand flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 animate-pulse-glow">
-                1
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <div key={feature.title} className={`rounded-2xl bg-white border border-[#E3E8EE] p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-${(index + 1) * 100}`}>
+                <div className="text-3xl mb-4">{feature.icon}</div>
+                <h3 className="text-lg font-semibold text-[#0A2540] mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-[#425466] text-sm leading-relaxed">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Discover</h3>
-              <p className="text-gray-600">
-                We learn about your organization, goals, and unique needs through a comprehensive consultation.
-              </p>
-            </div>
-            <div className="text-center animate-on-scroll animate-delay-200">
-              <div className="w-16 h-16 rounded-full bg-gradient-brand flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 animate-pulse-glow" style={{ animationDelay: '1s' }}>
-                2
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Design</h3>
-              <p className="text-gray-600">
-                Our experts craft a customized raffle strategy, handling licensing, compliance, and campaign planning.
-              </p>
-            </div>
-            <div className="text-center animate-on-scroll animate-delay-300">
-              <div className="w-16 h-16 rounded-full bg-gradient-brand flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 animate-pulse-glow" style={{ animationDelay: '2s' }}>
-                3
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Deliver</h3>
-              <p className="text-gray-600">
-                We execute your campaign flawlessly, providing support every step of the way until the final draw.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
