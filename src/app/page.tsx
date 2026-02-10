@@ -314,7 +314,7 @@ export default function Home() {
               </div>
 
               {/* Mission Control */}
-              <div className="hero-gradient rounded-2xl p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-200 relative overflow-hidden">
+              <div className="gradient-mesh-card rounded-2xl p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-200">
                 <div className="relative z-10">
                   <div className="absolute top-0 right-0 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</div>
                   <div className="text-3xl mb-3">&#x1F9E0;</div>
@@ -352,18 +352,17 @@ export default function Home() {
                   <span className="text-xs bg-[#F6F9FC] text-[#425466] px-3 py-1 rounded-full border border-[#E3E8EE]">Email strategy</span>
                   <span className="text-xs bg-[#F6F9FC] text-[#425466] px-3 py-1 rounded-full border border-[#E3E8EE]">Analytics</span>
                   <span className="text-xs bg-[#F6F9FC] text-[#425466] px-3 py-1 rounded-full border border-[#E3E8EE]">Platform help</span>
-                  <span className="text-xs bg-[#F6F9FC] text-[#425466] px-3 py-1 rounded-full border border-[#E3E8EE]">Ad reviews</span>
                 </div>
               </div>
 
               {/* Let's Talk */}
-              <div className="rounded-2xl bg-[#0A2540] p-6 lg:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-200">
+              <div className="rounded-2xl bg-white border border-[#E3E8EE] p-6 lg:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-200">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">&#x1F91D;</span>
-                  <h3 className="text-xl font-bold text-white">Let&rsquo;s Talk</h3>
+                  <h3 className="text-xl font-bold text-[#0A2540]">Let&rsquo;s Talk</h3>
                 </div>
-                <p className="text-[#12D8FA] font-semibold text-sm mb-3">Sometimes you just need to chat it out.</p>
-                <p className="text-gray-300 text-sm leading-relaxed mb-5">
+                <p className="text-[#0570DE] font-semibold text-sm mb-3">Sometimes you just need to chat it out.</p>
+                <p className="text-[#425466] text-sm leading-relaxed mb-5">
                   We&rsquo;ll walk through where you&rsquo;re at, what you&rsquo;re trying to achieve, and where Launchpad can fit in. Book a free 30-minute consult&mdash;no pressure, just real advice.
                 </p>
                 <Link href="/contact" className="inline-flex items-center gap-2 bg-[#0570DE] text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-[#2490FF] transition-all duration-300 group">
