@@ -649,6 +649,7 @@ export default function Home() {
                   Sign up with Google
                 </a>
               </div>
+              <p className="text-xs text-[#6B7C93] mt-4">Created by Launchpad Solutions</p>
             </div>
 
             {/* Right column — Lightspeed UI recreation */}
