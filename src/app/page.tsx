@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 const features = [
   {
@@ -52,50 +52,6 @@ function useScrollAnimation() {
   return ref
 }
 
-// Count-up animation component
-function CountUpNumber({ start = 1000000, end = 2623980, duration = 2500 }: { start?: number; end?: number; duration?: number }) {
-  const [count, setCount] = useState(start)
-  const [hasAnimated, setHasAnimated] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true)
-            const startTime = performance.now()
-            const animate = (currentTime: number) => {
-              const elapsed = currentTime - startTime
-              const progress = Math.min(elapsed / duration, 1)
-              // Easing function for smooth deceleration
-              const easeOut = 1 - Math.pow(1 - progress, 3)
-              const currentValue = Math.floor(start + (end - start) * easeOut)
-              setCount(currentValue)
-              if (progress < 1) {
-                requestAnimationFrame(animate)
-              }
-            }
-            requestAnimationFrame(animate)
-          }
-        })
-      },
-      { threshold: 0.5 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [start, end, duration, hasAnimated])
-
-  return (
-    <div ref={ref} className="inline-block">
-      ${count.toLocaleString()}+
-    </div>
-  )
-}
 
 const testimonials = [
   {
@@ -119,29 +75,21 @@ export default function Home() {
   const animationRef = useScrollAnimation()
 
   return (
-    <div className="pt-24" ref={animationRef}>
+    <div ref={animationRef}>
       {/* Hero Section */}
       <section className="hero-gradient min-h-[90vh] flex items-center relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16 lg:pt-32 lg:pb-24 relative z-10 w-full">
           <div className="max-w-2xl">
-            {/* Stat label */}
-            <div className="flex items-center gap-3 mb-8 animate-reveal">
-              <span className="text-[#6B7C93] text-sm font-medium tracking-wide">Total funds raised through our programs:</span>
-              <span className="text-[#0A2540] text-sm font-semibold tabular-nums">
-                <CountUpNumber />
-              </span>
-            </div>
-
-            <h1 className="text-[40px] md:text-[52px] lg:text-[66px] font-bold tracking-tight leading-[1.1] mb-8 animate-reveal" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-[38px] md:text-[48px] lg:text-[60px] font-bold tracking-tight leading-[1.1] mb-6 animate-reveal">
               <span className="text-[#0A2540]">Fundraising infrastructure to </span>
               <span className="gradient-text">grow your impact.</span>
               {' '}
               <span className="text-[#425466]">
-                Manage raffles, ensure compliance and run transparent campaigns &ndash; from your first draw to your thousandth.
+                Experts in raffle management and charitable gaming solutions, trusted to run high-performing programs from start to finish.
               </span>
             </h1>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-reveal" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12 animate-reveal" style={{ animationDelay: '0.2s' }}>
               <Link href="/contact" className="btn-primary text-base inline-flex items-center gap-2 group">
                 Get started
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -152,6 +100,16 @@ export default function Home() {
                 Explore Services
               </Link>
             </div>
+
+            {/* Testimonial quote */}
+            <div className="max-w-xl animate-reveal" style={{ animationDelay: '0.4s' }}>
+              <p className="text-[#425466] text-base leading-relaxed italic">
+                &ldquo;Launchpad Solutions doesn&rsquo;t just advise &mdash; they deliver. Their expertise has been instrumental in making our 50/50 one of the most successful hospital lotteries in Canada.&rdquo;
+              </p>
+              <p className="text-[#0A2540] text-sm font-semibold mt-3">
+                &mdash;Glenn Craig, President &amp; CEO, Thunder Bay Regional Health Sciences Foundation
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -159,11 +117,12 @@ export default function Home() {
       {/* Trusted-by logo bar */}
       <section className="border-t border-b py-8" style={{ borderColor: 'var(--border)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 grayscale">
-            <span className="text-lg font-semibold text-[#425466] tracking-wide">Thunder Bay Regional Health Sciences Foundation</span>
-            <span className="text-lg font-semibold text-[#425466] tracking-wide">Fort William Rotary Club</span>
-            <span className="text-lg font-semibold text-[#425466] tracking-wide">Lakehead Motors</span>
-            <span className="text-lg font-semibold text-[#425466] tracking-wide">Cruising For a Cure</span>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-60">
+            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Thunder Bay 50/50</span>
+            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Fort William Rotary House Lottery</span>
+            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Thunder Bay Catch The Ace Lottery</span>
+            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Cruising For a Cure</span>
+            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">J&amp;J Raffle</span>
           </div>
         </div>
       </section>
