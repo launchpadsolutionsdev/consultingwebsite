@@ -12,6 +12,7 @@ const articles = [
     excerpt: 'A Timmins man is $7.7 million richer after winning the Thunder Bay Regional Health Sciences Foundation\'s 50/50 draw. The life-changing prize marks another record-breaking moment for the lottery program that has become the largest hospital 50/50 in Canada.',
     image: '/images/ctv-timmins-man.jpg',
     imageAlt: 'Timmins man wins $7.7M Thunder Bay 50/50',
+    imagePosition: 'top' as const,
     url: 'https://www.ctvnews.ca/northern-ontario/article/timmins-man-wins-77m-in-thunder-bay-hospitals-5050-draw/',
   },
   {
@@ -21,6 +22,7 @@ const articles = [
     excerpt: 'A couple from the Greater Sudbury community of Hanmer is now $6.4 million richer, after winning the 2024 Thunder Bay Regional Health Sciences Foundation\'s 50/50 draw.',
     image: '/images/cbc-nat-clem.jpg',
     imageAlt: 'Natalie and Clem Bigras with their $6.4 million cheque',
+    imagePosition: 'center' as const,
     url: 'https://www.cbc.ca/news/canada/thunder-bay/thunder-bay-hospital-foundation-record-breaking-draw-1.7422793',
   },
   {
@@ -30,6 +32,7 @@ const articles = [
     excerpt: 'A Nolalu resident is celebrating after winning the Thunder Bay Regional Health Sciences Foundation\'s 50/50 Grand Prize of $2.3 million.',
     image: '/images/torin-cass-story.jpg',
     imageAlt: 'Nolalu man wins $2.3M 50/50 Grand Prize',
+    imagePosition: 'top' as const,
     url: 'https://www.tbnewswatch.com/local-news/nolalu-man-wins-23m-5050-grand-prize-11816107',
   },
 ]
@@ -185,17 +188,17 @@ export default function Home() {
             {/* Featured article — full width */}
             <div className="rounded-2xl overflow-hidden bg-[#F6F9FC] border border-[#E3E8EE] animate-on-scroll">
               <div className="grid lg:grid-cols-2">
-                <div className="relative aspect-[4/3] lg:aspect-auto">
+                <div className="relative aspect-[4/3] lg:aspect-auto min-h-[300px]">
                   <Image
                     src={articles[0].image}
                     alt={articles[0].imageAlt}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={articles[0].logo} alt={articles[0].outlet} className="h-7 w-auto mb-6 opacity-70" />
+                  <img src={articles[0].logo} alt={articles[0].outlet} className="h-7 w-auto max-w-[120px] mb-6 opacity-70" />
                   <h3 className="text-2xl md:text-3xl font-bold text-[#0A2540] mb-4 leading-tight">
                     &ldquo;{articles[0].headline}&rdquo;
                   </h3>
@@ -226,7 +229,7 @@ export default function Home() {
                       src={article.image}
                       alt={article.imageAlt}
                       fill
-                      className="object-cover"
+                      className={`object-cover ${article.imagePosition === 'top' ? 'object-top' : 'object-center'}`}
                     />
                   </div>
                   <div className="p-6 lg:p-8">
