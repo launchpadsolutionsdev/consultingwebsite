@@ -80,7 +80,7 @@ export default function Home() {
       <section className="hero-gradient min-h-[90vh] flex items-center relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16 lg:pt-32 lg:pb-24 relative z-10 w-full">
           <div className="max-w-2xl">
-            <h1 className="text-[40px] md:text-[52px] lg:text-[66px] font-bold tracking-tight leading-[1.1] mb-6 animate-reveal">
+            <h1 className="text-[38px] md:text-[48px] lg:text-[60px] font-bold tracking-tight leading-[1.1] mb-6 animate-reveal">
               <span className="text-[#0A2540]">Fundraising infrastructure to </span>
               <span className="gradient-text">grow your impact.</span>
               {' '}
