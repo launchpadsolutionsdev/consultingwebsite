@@ -85,7 +85,7 @@ export default function Home() {
               <span className="gradient-text">grow your impact.</span>
               {' '}
               <span className="text-[#425466]">
-                Experts in raffle management and charitable gaming solutions, trusted by nonprofits to run high-performing programs from start to finish.
+                Experts in raffle management and charitable gaming solutions, trusted to run high-performing programs from start to finish.
               </span>
             </h1>
 
