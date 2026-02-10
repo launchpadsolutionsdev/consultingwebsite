@@ -131,12 +131,12 @@ export default function Home() {
       {/* Trusted-by logo bar */}
       <section className="border-t border-b py-8" style={{ borderColor: 'var(--border)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-60">
-            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Thunder Bay 50/50</span>
-            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Fort William Rotary House Lottery</span>
-            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Thunder Bay Catch The Ace Lottery</span>
-            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">Cruising For a Cure</span>
-            <span className="text-sm font-semibold text-[#425466] tracking-wide uppercase">J&amp;J Raffle</span>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 grayscale opacity-70">
+            <Image src="/images/TB5050 Logo Testemonial.png" alt="Thunder Bay 50/50" width={120} height={48} className="h-10 w-auto object-contain" />
+            <Image src="/images/Rotary House Lottery Testemonial.png" alt="Fort William Rotary House Lottery" width={120} height={48} className="h-10 w-auto object-contain" />
+            <Image src="/images/Thunder Bay Catch The Ace Logo Testemonial.png" alt="Thunder Bay Catch The Ace Lottery" width={120} height={48} className="h-10 w-auto object-contain" />
+            <Image src="/images/CFAC Jeep Raffle Logo Tesetmonial.png" alt="Cruising For a Cure" width={120} height={48} className="h-10 w-auto object-contain" />
+            <Image src="/images/J&J.png" alt="J&J Raffle" width={120} height={48} className="h-10 w-auto object-contain" />
           </div>
         </div>
       </section>
