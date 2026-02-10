@@ -610,6 +610,23 @@ export default function Home() {
               <p className="text-[17px] md:text-lg text-[#425466] leading-relaxed mb-8">
                 Lightspeed is a full suite of purpose-built AI-powered tools, born out of necessity. Lightspeed gets smarter the more you use it. It never forgets anything, and it&rsquo;s always ready to help you tackle customer service, data normalization&mdash;anything you need to get done, fast.
               </p>
+
+              {/* Key features row */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div>
+                  <div className="text-lg md:text-xl font-bold text-[#0A2540] mb-0.5">Constantly improving</div>
+                  <p className="text-[#6B7C93] text-sm">Gets smarter with every interaction</p>
+                </div>
+                <div>
+                  <div className="text-lg md:text-xl font-bold lightspeed-text mb-0.5">Organization-specific AI</div>
+                  <p className="text-[#6B7C93] text-sm">Trained on your data and workflows</p>
+                </div>
+                <div>
+                  <div className="text-lg md:text-xl font-bold text-[#0A2540] mb-0.5">Supercharge productivity</div>
+                  <p className="text-[#6B7C93] text-sm">Automate the repetitive, focus on impact</p>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <a
                   href="https://www.lightspeedutility.ca"
