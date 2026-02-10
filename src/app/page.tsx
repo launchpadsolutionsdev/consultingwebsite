@@ -197,8 +197,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={articles[0].logo} alt={articles[0].outlet} className="h-8 mb-6 opacity-70" style={{ width: 'auto', maxHeight: '32px' }} />
+                  <Image src={articles[0].logo} alt={articles[0].outlet} width={80} height={32} className="mb-6 opacity-70 object-contain" />
                   <h3 className="text-2xl md:text-3xl font-bold text-[#0A2540] mb-4 leading-tight">
                     &ldquo;{articles[0].headline}&rdquo;
                   </h3>
