@@ -37,28 +37,6 @@ const articles = [
   },
 ]
 
-const features = [
-  {
-    icon: '🎯',
-    title: 'Strategic Planning',
-    description: 'We analyze your goals and create a customized roadmap for fundraising success.',
-  },
-  {
-    icon: '📋',
-    title: 'Compliance & Licensing',
-    description: 'Navigate complex regulations with confidence. We handle the paperwork so you can focus on your mission.',
-  },
-  {
-    icon: '🚀',
-    title: 'Campaign Execution',
-    description: 'From ticket sales to winner selection, we manage every detail of your raffle campaign.',
-  },
-  {
-    icon: '📊',
-    title: 'Analytics & Reporting',
-    description: 'Real-time insights and comprehensive reports to track your fundraising performance.',
-  },
-]
 
 // Animation hook for scroll reveal
 function useScrollAnimation() {
@@ -259,23 +237,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 section-gradient">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div key={feature.title} className={`rounded-2xl bg-white border border-[#E3E8EE] p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-${(index + 1) * 100}`}>
-                <div className="text-3xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-[#0A2540] mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-[#425466] text-sm leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why Launchpad Exists */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -315,6 +276,100 @@ export default function Home() {
                 height={600}
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 section-gradient">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Intro statement */}
+          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.15] tracking-tight text-[#0A2540] mb-16 animate-on-scroll">
+            We believe that every organization&mdash;no matter the size&mdash;deserves access to expert support and powerful tools to{' '}
+            <span className="gradient-text">unleash their fundraising potential.</span>
+            {' '}That&rsquo;s why we&rsquo;ve built a pricing model that grows with you.
+          </h2>
+
+          {/* Pricing bento grid — 2x2 */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Lift-Off Package */}
+            <div className="rounded-2xl bg-white border border-[#E3E8EE] p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-100">
+              <div className="text-3xl mb-3">&#x1F680;</div>
+              <h3 className="text-2xl font-bold text-[#0A2540] mb-1">Lift-Off Package</h3>
+              <p className="text-[#0570DE] font-semibold text-sm mb-4">One-time setup, then you take the reins.</p>
+              <p className="text-[#425466] text-base leading-relaxed mb-6">
+                Perfect for organizations that just need a boost to get off the ground. We&rsquo;ll handle the technical setup, licensing, and provide you with a personalized roadmap to success&mdash;then step back and let you run with it.
+              </p>
+              <p className="text-xs font-semibold text-[#6B7C93] uppercase tracking-wider mb-3">Service Includes:</p>
+              <ul className="space-y-2 text-[#425466] text-sm">
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Website setup and configuration</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Licensing guidance and support</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Launch checklist and best practices</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Marketing tips and design templates</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>One-time flat fee</li>
+              </ul>
+            </div>
+
+            {/* Mission Control */}
+            <div className="rounded-2xl bg-[#0A2540] border border-[#0A2540] p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-200 relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-[#0570DE] text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</div>
+              <div className="text-3xl mb-3">&#x1F9E0;</div>
+              <h3 className="text-2xl font-bold text-white mb-1">Mission Control</h3>
+              <p className="text-[#12D8FA] font-semibold text-sm mb-4">You hand us the keys. We run the show.</p>
+              <p className="text-gray-300 text-base leading-relaxed mb-6">
+                End-to-end raffle management from a team that&rsquo;s done it all before. We manage every aspect of your draw so you can focus on your mission&mdash;and watch the numbers climb.
+              </p>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Service Includes:</p>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li className="flex items-start gap-2"><span className="text-[#12D8FA] mt-0.5">&#10003;</span>Full marketing campaign management</li>
+                <li className="flex items-start gap-2"><span className="text-[#12D8FA] mt-0.5">&#10003;</span>Licensing and compliance handled</li>
+                <li className="flex items-start gap-2"><span className="text-[#12D8FA] mt-0.5">&#10003;</span>Platform setup and optimization</li>
+                <li className="flex items-start gap-2"><span className="text-[#12D8FA] mt-0.5">&#10003;</span>Customer service and email support</li>
+                <li className="flex items-start gap-2"><span className="text-[#12D8FA] mt-0.5">&#10003;</span>Performance tracking and reporting</li>
+              </ul>
+            </div>
+
+            {/* Custom Support */}
+            <div className="rounded-2xl bg-white border border-[#E3E8EE] p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-100">
+              <div className="text-3xl mb-3">&#x1F6E0;&#xFE0F;</div>
+              <h3 className="text-2xl font-bold text-[#0A2540] mb-1">Custom Support</h3>
+              <p className="text-[#0570DE] font-semibold text-sm mb-4">Just need help with one part? We&rsquo;re in.</p>
+              <p className="text-[#425466] text-base leading-relaxed mb-6">
+                Already running a draw but tired of inbox chaos? Need a second brain on your ad strategy? We offer &agrave; la carte services like customer service, email writing, compliance assistance, and more.
+              </p>
+              <p className="text-xs font-semibold text-[#6B7C93] uppercase tracking-wider mb-3">Popular add-ons:</p>
+              <ul className="space-y-2 text-[#425466] text-sm">
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Customer service inbox management</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Email and messaging strategy</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Analytics and reporting support</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Platform troubleshooting</li>
+                <li className="flex items-start gap-2"><span className="text-[#0570DE] mt-0.5">&#10003;</span>Ad reviews and creative feedback</li>
+              </ul>
+            </div>
+
+            {/* Let's Talk */}
+            <div className="rounded-2xl bg-gradient-to-br from-[#0570DE] to-[#12D8FA] p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-on-scroll animate-delay-200">
+              <div className="text-3xl mb-3">&#x1F91D;</div>
+              <h3 className="text-2xl font-bold text-white mb-1">Let&rsquo;s Talk</h3>
+              <p className="text-white/80 font-semibold text-sm mb-4">Sometimes you just need to chat it out.</p>
+              <p className="text-white/90 text-base leading-relaxed mb-6">
+                We&rsquo;ll walk through where you&rsquo;re at, what you&rsquo;re trying to achieve, and where Launchpad can fit in. Book a free 30-minute consult&mdash;no pressure, just real advice.
+              </p>
+              <p className="text-xs font-semibold text-white/70 uppercase tracking-wider mb-3">Discussions could include:</p>
+              <ul className="space-y-2 text-white/90 text-sm mb-8">
+                <li className="flex items-start gap-2"><span className="text-white mt-0.5">&#10003;</span>What licensing and compliance might look like in your province</li>
+                <li className="flex items-start gap-2"><span className="text-white mt-0.5">&#10003;</span>How to structure your prizing and ticket options</li>
+                <li className="flex items-start gap-2"><span className="text-white mt-0.5">&#10003;</span>Where to start with marketing (and what to avoid)</li>
+                <li className="flex items-start gap-2"><span className="text-white mt-0.5">&#10003;</span>Whether you should run the draw yourself or hire help</li>
+                <li className="flex items-start gap-2"><span className="text-white mt-0.5">&#10003;</span>How to scale without burning out your team</li>
+              </ul>
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-[#0570DE] font-semibold px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 group">
+                Book a free consultation
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
