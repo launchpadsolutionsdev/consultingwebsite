@@ -156,6 +156,30 @@ section {
   z-index: 1;
 }
 
+/* Gradient mesh card variant — dark base, no white overlay */
+.gradient-mesh-card {
+  background: #0A2540;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-mesh-card::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 100%;
+  height: 160%;
+  background:
+    radial-gradient(ellipse 60% 50% at 60% 30%, rgba(255, 107, 53, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 70% 60%, rgba(233, 30, 140, 0.3) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 80% 40%, rgba(180, 80, 255, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 50% 70%, rgba(18, 216, 250, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(255, 170, 50, 0.35) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Section backgrounds */
 .section-gradient {
   background: linear-gradient(180deg, transparent 0%, rgba(5, 112, 222, 0.03) 50%, transparent 100%);
@@ -337,4 +361,55 @@ section {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Lightspeed warm gradient background — matches lightspeedutility.ca hero */
+.lightspeed-gradient {
+  background: #FFFAF7;
+  position: relative;
+  overflow: hidden;
+}
+
+.lightspeed-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse 70% 80% at 85% 20%, rgba(255, 160, 140, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 70% at 95% 10%, rgba(255, 120, 120, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 70% 50%, rgba(255, 190, 170, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 80%, rgba(245, 200, 190, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Lightspeed gradient text */
+.lightspeed-text {
+  background: linear-gradient(135deg, #FF6B35 0%, #E91E8C 50%, #B450FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Floating UI card animation */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-float-gentle-delayed {
+  animation: float-gentle 5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-float-gentle-slow {
+  animation: float-gentle 7s ease-in-out infinite;
+  animation-delay: 0.8s;
 }
