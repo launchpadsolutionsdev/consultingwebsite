@@ -55,12 +55,6 @@ export default function CaseStudiesIndex() {
                       <div className="absolute top-0 right-0 w-48 h-48 bg-brand-orange rounded-full blur-3xl" />
                     </div>
                   )}
-                  {item.result && (
-                    <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3">
-                      <div className="text-2xl md:text-3xl font-bold gradient-text">{item.result}</div>
-                      <div className="text-xs text-gray-600 font-medium">Headline Result</div>
-                    </div>
-                  )}
                 </div>
               </div>
               <div className="md:col-span-3 flex flex-col justify-center">
