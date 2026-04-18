@@ -104,7 +104,7 @@ export default function TeamMemberPage({ params }: Params) {
 
           <div className="grid md:grid-cols-5 gap-10 items-start">
             <div className="md:col-span-2">
-              <div className="aspect-square relative overflow-hidden rounded-3xl shadow-sm">
+              <div className="aspect-[4/5] relative overflow-hidden rounded-3xl shadow-sm">
                 <BigAvatar member={member} />
               </div>
             </div>
