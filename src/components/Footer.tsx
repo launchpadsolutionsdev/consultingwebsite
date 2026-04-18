@@ -7,7 +7,6 @@ const footerLinks = {
     { name: 'Catch the Ace', href: '/services/catch-the-ace' },
     { name: 'Prize Raffles', href: '/services/prize-raffle' },
     { name: 'Consulting', href: '/services/consulting' },
-    { name: 'Lightspeed AI', href: '/lightspeed' },
     { name: 'Our Process', href: '/process' },
   ],
   insights: [

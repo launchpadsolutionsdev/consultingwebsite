@@ -36,7 +36,6 @@ export async function GET() {
     { title: 'Catch the Ace', description: 'Progressive weekly raffles', category: 'Services', href: '/services/catch-the-ace', type: 'Page' },
     { title: 'Prize Raffles', description: 'Vehicle, home, and experience raffles', category: 'Services', href: '/services/prize-raffle', type: 'Page' },
     { title: 'Strategic Consulting', description: 'Audits, feasibility, board-level assessments', category: 'Services', href: '/services/consulting', type: 'Page' },
-    { title: 'Lightspeed AI', description: 'AI productivity suite for raffle operators', category: 'Services', href: '/lightspeed', type: 'Page' },
     { title: 'Team', description: 'Meet the Launchpad team', category: 'Company', href: '/team', type: 'Page' },
     { title: 'Our Process', description: 'How a Launchpad engagement actually works', category: 'Company', href: '/process', type: 'Page' },
     { title: 'Testimonials', description: 'What our clients say', category: 'Company', href: '/testimonials', type: 'Page' },
