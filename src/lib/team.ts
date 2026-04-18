@@ -29,6 +29,7 @@ export const TEAM: TeamMember[] = [
       'Hospital foundation strategy',
     ],
     focusAreas: ['Strategy', 'Client engagements', 'Operational standards', 'Writing'],
+    image: '/images/torin-gunnell.webp',
     linkedin: '#',
     email: 'torin@launchpadsolutions.ca',
   },
@@ -85,6 +86,7 @@ export const TEAM: TeamMember[] = [
       'Community relationships',
     ],
     focusAreas: ['Strategic guidance', 'Hospital foundation mentorship', 'Governance'],
+    image: '/images/glenn-craig.jpeg',
   },
 ]
 
