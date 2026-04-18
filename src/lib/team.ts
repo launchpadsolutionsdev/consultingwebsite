@@ -51,6 +51,7 @@ export const TEAM: TeamMember[] = [
       'Sales & competitor analysis',
     ],
     focusAreas: ['Marketing', 'Operations', 'Creative direction', 'Client success'],
+    image: '/images/cassandra-carangi.jpg',
     linkedin: '#',
     email: 'cassandra@launchpadsolutions.ca',
   },
