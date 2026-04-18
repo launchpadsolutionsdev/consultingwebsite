@@ -52,7 +52,7 @@ const faqs = [
     items: [
       {
         q: 'What platforms do you work with?',
-        a: 'We\u2019re platform-agnostic. We work with the enterprise-grade raffle platforms (Ascend, BUMP CBN, Stride) as well as select regional specialists. Platform selection is a downstream decision after program design \u2014 not a starting point.',
+        a: 'We\u2019re platform-agnostic. We work with the enterprise-grade raffle platforms (BUMP CBN, Stride, Ascend) as well as select regional specialists. Platform selection is a downstream decision after program design \u2014 not a starting point.',
       },
       {
         q: 'Who owns the supporter data?',
