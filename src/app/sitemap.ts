@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getAllItems } from '@/lib/content'
-import { AUTHORS } from '@/lib/authors'
+import { TEAM } from '@/lib/team'
 import { RESOURCES } from '@/lib/resources'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://launchpadsolutions.ca'
@@ -59,11 +59,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
-    ...AUTHORS.map((a) => ({
-      url: `${BASE_URL}/authors/${a.slug}`,
+    ...TEAM.map((m) => ({
+      url: `${BASE_URL}/team/${m.slug}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.5,
+      priority: 0.6,
     })),
     ...RESOURCES.filter((r) => !r.toolHref).map((r) => ({
       url: `${BASE_URL}/resources/${r.slug}`,

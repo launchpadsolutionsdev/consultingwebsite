@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { formatDate, getRelatedItems, type ContentItem, type ContentType } from '@/lib/content'
-import { authorSlugFromName, getAuthorByName } from '@/lib/authors'
+import { getTeamMemberByName } from '@/lib/team'
 import { mdxComponents } from './MDXComponents'
 import ArticleCard from './ArticleCard'
 import Newsletter from '@/components/Newsletter'
@@ -56,35 +56,45 @@ export default function ArticleLayout({ item, type, basePath, hubLabel }: Props)
 
           <div className="flex flex-wrap items-center gap-4 pb-8 border-b border-gray-100">
             {(() => {
-              const author = getAuthorByName(item.author)
-              const authorSlug = author?.slug ?? authorSlugFromName(item.author)
+              const teamMember = getTeamMemberByName(item.author)
               const initials = item.author
                 .split(' ')
                 .map((n) => n[0])
                 .slice(0, 2)
                 .join('')
+              const avatar = (
+                <div className="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center text-white font-semibold text-sm overflow-hidden">
+                  {teamMember?.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={teamMember.image} alt={item.author} className="w-full h-full object-cover" />
+                  ) : (
+                    initials
+                  )}
+                </div>
+              )
+              const meta = (
+                <div>
+                  <div className="text-sm font-semibold text-primary-900 group-hover:text-accent-blue transition-colors">
+                    {item.author}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {formatDate(item.date)} · {item.readingTime}
+                  </div>
+                </div>
+              )
+              if (teamMember) {
+                return (
+                  <Link href={`/team/${teamMember.slug}`} className="flex items-center gap-3 group">
+                    {avatar}
+                    {meta}
+                  </Link>
+                )
+              }
               return (
-                <Link
-                  href={`/authors/${authorSlug}`}
-                  className="flex items-center gap-3 group"
-                >
-                  <div className="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center text-white font-semibold text-sm overflow-hidden">
-                    {author?.image ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={author.image} alt={item.author} className="w-full h-full object-cover" />
-                    ) : (
-                      initials
-                    )}
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-primary-900 group-hover:text-accent-blue transition-colors">
-                      {item.author}
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      {formatDate(item.date)} · {item.readingTime}
-                    </div>
-                  </div>
-                </Link>
+                <div className="flex items-center gap-3">
+                  {avatar}
+                  {meta}
+                </div>
               )
             })()}
             {item.tags.length > 0 && (

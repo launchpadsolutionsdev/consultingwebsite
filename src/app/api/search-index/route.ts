@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getAllItems } from '@/lib/content'
+import { TEAM } from '@/lib/team'
 
 export const dynamic = 'force-static'
 
@@ -53,6 +54,18 @@ export async function GET() {
   ]
   for (const p of pages) {
     entries.push({ ...p, tags: [] })
+  }
+
+  // Index team members
+  for (const m of TEAM) {
+    entries.push({
+      title: m.name,
+      description: `${m.role} — ${m.shortBio}`,
+      category: m.roleType === 'advisor' ? 'Advisor' : 'Team',
+      href: `/team/${m.slug}`,
+      type: 'Person',
+      tags: m.expertise,
+    })
   }
 
   return NextResponse.json({ entries })
