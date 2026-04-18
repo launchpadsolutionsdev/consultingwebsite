@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Services | Launchpad Solutions',
   description:
-    'Full-service raffle management for charities of every size. From 50/50 and Catch the Ace programs to custom consulting and our Lightspeed AI productivity suite.',
+    'Full-service raffle management for charities of every size. From 50/50 and Catch the Ace programs to Catch the Ace and strategic consulting engagements.',
 }
 
 const services = [
@@ -67,22 +67,6 @@ const services = [
       'Board-ready investment case preparation',
     ],
     color: 'from-purple-600 via-purple-500 to-pink-500',
-  },
-  {
-    slug: 'lightspeed',
-    title: 'Lightspeed AI Suite',
-    tag: 'Productivity Tools',
-    description:
-      'Our AI-powered productivity tools designed specifically for raffle operators — from automated donor communications to content generation to draw-day support.',
-    highlights: [
-      'AI donor communication automation',
-      'Creative and copy generation',
-      'Weekly reporting automation',
-      'Customer support co-pilot',
-      'Integrated with the full Launchpad operating stack',
-    ],
-    color: 'from-orange-500 via-pink-500 to-purple-500',
-    externalHref: '/lightspeed',
   },
 ]
 
@@ -157,7 +141,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((s) => {
-              const href = s.externalHref ?? `/services/${s.slug}`
+              const href = `/services/${s.slug}`
               return (
                 <Link
                   key={s.slug}

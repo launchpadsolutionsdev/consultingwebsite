@@ -20,7 +20,6 @@ const navigation: NavItem[] = [
       { name: 'Catch the Ace', href: '/services/catch-the-ace', description: 'Progressive weekly raffles' },
       { name: 'Prize Raffles', href: '/services/prize-raffle', description: 'Vehicle, home & experience raffles' },
       { name: 'Strategic Consulting', href: '/services/consulting', description: 'Audits & assessments' },
-      { name: 'Lightspeed AI', href: '/lightspeed', description: 'AI productivity suite' },
       { name: 'Our Process', href: '/process', description: 'How we work with clients' },
     ],
   },

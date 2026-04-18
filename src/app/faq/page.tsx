@@ -88,10 +88,6 @@ const faqs = [
         q: 'Who founded Launchpad Solutions?',
         a: 'Torin Gunnell, who led and operated the Thunder Bay Regional Health Sciences Foundation 50/50 program during its record-breaking years. Launchpad was founded to bring that operational expertise to other charities across North America.',
       },
-      {
-        q: 'What\u2019s Lightspeed?',
-        a: 'Our AI-powered productivity suite built specifically for raffle operators. Automates donor communications, generates creative, and accelerates daily operations. Learn more on [the Lightspeed page](/lightspeed).',
-      },
     ],
   },
 ]

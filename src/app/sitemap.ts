@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/catch-the-ace',
     '/services/prize-raffle',
     '/services/consulting',
-    '/lightspeed',
     '/blog',
     '/insights',
     '/case-studies',
