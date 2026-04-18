@@ -4,6 +4,7 @@ import { formatDate, getRelatedItems, type ContentItem, type ContentType } from 
 import { mdxComponents } from './MDXComponents'
 import ArticleCard from './ArticleCard'
 import Newsletter from '@/components/Newsletter'
+import ReadingProgress from './ReadingProgress'
 
 interface Props {
   item: ContentItem
@@ -17,6 +18,7 @@ export default function ArticleLayout({ item, type, basePath, hubLabel }: Props)
 
   return (
     <>
+      <ReadingProgress />
       <article className="pt-32 pb-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <nav className="mb-8 text-sm text-gray-500">
