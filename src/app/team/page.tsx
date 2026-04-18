@@ -53,7 +53,7 @@ function TeamCard({ member }: { member: TeamMember }) {
       href={`/team/${member.slug}`}
       className="group block bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
     >
-      <div className="relative overflow-hidden aspect-[4/3]">
+      <div className="relative overflow-hidden aspect-[4/5]">
         <Avatar member={member} />
       </div>
       <div className="p-7">
@@ -177,7 +177,7 @@ export default function TeamPage() {
                       Advisor
                     </span>
                   </div>
-                  <div className="aspect-[4/3] relative overflow-hidden">
+                  <div className="aspect-[4/5] relative overflow-hidden">
                     <Avatar member={m} />
                   </div>
                   <div className="p-6">
