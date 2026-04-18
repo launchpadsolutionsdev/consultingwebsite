@@ -14,24 +14,28 @@ const logos = [
     alt: 'Thunder Bay 50/50',
     caption: 'Thunder Bay 50/50',
     result: '$15.7M record month',
+    href: 'https://www.thunderbay5050.ca',
   },
   {
     src: '/images/Thunder Bay Catch The Ace Logo Testemonial.png',
     alt: 'Thunder Bay Catch the Ace',
     caption: 'Thunder Bay Catch the Ace',
     result: 'Year-round engagement',
+    href: 'https://www.thunderbaycatchtheace.ca',
   },
   {
     src: '/images/Rotary House Lottery Testemonial.png',
     alt: 'Rotary House Lottery',
     caption: 'Rotary House Lottery',
     result: '$1.2M raised to date',
+    href: 'https://www.fwrotaryhouselottery.ca',
   },
   {
     src: '/images/CFAC Jeep Raffle Logo Tesetmonial.png',
     alt: 'CFAC Jeep Raffle',
     caption: 'CFAC Jeep Raffle',
     result: '2x total fundraising capacity',
+    href: 'https://www.cruisingforacure.ca',
   },
   {
     src: '/images/J&J.png',
@@ -100,18 +104,35 @@ export default function ClientsPage() {
             Featured client programs
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {logos.map((l) => (
-              <div
-                key={l.caption}
-                className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-xl transition-all text-center"
-              >
-                <div className="aspect-square relative mb-4 bg-gray-50 rounded-xl p-4 flex items-center justify-center">
-                  <Image src={l.src} alt={l.alt} fill className="object-contain p-4" />
+            {logos.map((l) => {
+              const body = (
+                <>
+                  <div className="aspect-square relative mb-4 bg-gray-50 rounded-xl p-4 flex items-center justify-center">
+                    <Image src={l.src} alt={l.alt} fill className="object-contain p-4" />
+                  </div>
+                  <h3 className="font-bold text-primary-900 text-sm mb-1">{l.caption}</h3>
+                  <p className="text-xs text-gray-500">{l.result}</p>
+                </>
+              )
+              const cardClass =
+                'bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-0.5 transition-all text-center'
+              return l.href ? (
+                <a
+                  key={l.caption}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${l.caption}`}
+                  className={`block ${cardClass}`}
+                >
+                  {body}
+                </a>
+              ) : (
+                <div key={l.caption} className={cardClass}>
+                  {body}
                 </div>
-                <h3 className="font-bold text-primary-900 text-sm mb-1">{l.caption}</h3>
-                <p className="text-xs text-gray-500">{l.result}</p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
