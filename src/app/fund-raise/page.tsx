@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Hero from './_sections/Hero'
 import FinalCta from './_sections/FinalCta'
+import Testimonial from './_sections/Testimonial'
 
 export const metadata: Metadata = {
   title: 'Fund-Raise — Fundraising Intelligence for RE NXT Foundations',
@@ -48,6 +49,7 @@ export default function FundRaisePage() {
       />
       <Hero />
       <FinalCta />
+      <Testimonial />
     </>
   )
 }
