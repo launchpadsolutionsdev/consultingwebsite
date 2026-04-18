@@ -8,6 +8,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://launchpadsolutions
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '',
+    '/fund-raise',
     '/services',
     '/services/5050-management',
     '/services/catch-the-ace',

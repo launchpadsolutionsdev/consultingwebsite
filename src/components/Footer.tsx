@@ -2,6 +2,10 @@ import Link from 'next/link'
 import Newsletter from './Newsletter'
 
 const footerLinks = {
+  products: [
+    { name: 'Fund-Raise', href: '/fund-raise' },
+    { name: 'Raffle Management', href: '/services' },
+  ],
   services: [
     { name: '50/50 Management', href: '/services/5050-management' },
     { name: 'Catch the Ace', href: '/services/catch-the-ace' },
@@ -38,7 +42,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-5 gap-10 mb-12">
+        <div className="grid lg:grid-cols-6 gap-10 mb-12">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -49,8 +53,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-600 mb-6 max-w-sm">
-              Expert raffle management and charitable gaming solutions. We help organizations
-              unleash their fundraising potential.
+              Launchpad Solutions is the parent of Fund-Raise and our raffle management
+              practice — helping nonprofits unleash their fundraising potential.
             </p>
             <div className="max-w-sm">
               <div className="text-sm font-semibold text-primary-900 mb-2">
@@ -61,6 +65,19 @@ export default function Footer() {
               </p>
               <Newsletter variant="footer" />
             </div>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-gray-900 mb-4">Products</h4>
+            <ul className="space-y-3">
+              {footerLinks.products.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
