@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -59,6 +60,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = headers().get('x-pathname') ?? ''
+  const bareLayout = pathname === '/coming-soon'
+
   return (
     <html lang="en">
       <head>
@@ -68,9 +72,15 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white text-gray-900">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {bareLayout ? (
+          children
+        ) : (
+          <>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   )
