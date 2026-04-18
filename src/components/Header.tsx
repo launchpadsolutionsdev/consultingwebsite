@@ -13,10 +13,10 @@ interface NavItem {
 const navigation: NavItem[] = [
   {
     name: 'Products',
-    href: '/fund-raise',
+    href: '/services',
     children: [
-      { name: 'Fund-Raise', href: '/fund-raise', description: 'Fundraising intelligence for RE NXT foundations' },
-      { name: 'Raffle Management', href: '/services', description: 'Our consulting-led raffle management practice' },
+      { name: 'Raffle Management', href: '/services', description: 'Our flagship consulting practice — 50/50, Catch the Ace, prize raffles' },
+      { name: 'Fund-Raise', href: '/fund-raise', description: 'Fundraising intelligence platform for RE NXT foundations' },
     ],
   },
   {
