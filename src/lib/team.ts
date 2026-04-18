@@ -30,7 +30,7 @@ export const TEAM: TeamMember[] = [
       'Lottery software & AI',
     ],
     focusAreas: ['Strategy', 'Client engagements', 'Product & software', 'Creative direction'],
-    image: '/images/torin-gunnell.webp',
+    image: '/images/torin-gunnell.jpg',
     linkedin: '#',
     email: 'torin@launchpadsolutions.ca',
   },
@@ -71,6 +71,7 @@ export const TEAM: TeamMember[] = [
       'Client communications',
     ],
     focusAreas: ['Administration', 'Compliance', 'Internal operations'],
+    image: '/images/stephanie-francis.jpg',
     email: 'stephanie@launchpadsolutions.ca',
   },
   {
@@ -90,7 +91,7 @@ export const TEAM: TeamMember[] = [
       'Sector advocacy',
     ],
     focusAreas: ['Strategic guidance', 'Governance', 'Sector advocacy', 'Speaking'],
-    image: '/images/glenn-craig.jpeg',
+    image: '/images/glenn-craig.jpg',
   },
 ]
 
