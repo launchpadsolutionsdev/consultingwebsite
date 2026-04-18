@@ -3,8 +3,8 @@ import Newsletter from './Newsletter'
 
 const footerLinks = {
   products: [
-    { name: 'Fund-Raise', href: '/fund-raise' },
     { name: 'Raffle Management', href: '/services' },
+    { name: 'Fund-Raise', href: '/fund-raise' },
   ],
   services: [
     { name: '50/50 Management', href: '/services/5050-management' },

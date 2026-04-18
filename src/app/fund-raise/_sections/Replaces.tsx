@@ -33,7 +33,7 @@ const ROWS = [
 
 export default function Replaces() {
   return (
-    <section className="py-24 bg-white border-t border-gray-100">
+    <section id="replaces" className="py-24 bg-white border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div
