@@ -89,22 +89,15 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#replaces"
+                href={`mailto:${SUPPORT_EMAIL}?subject=Fund-Raise%20demo%20request`}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white border transition-colors hover:bg-white/5"
                 style={{ borderColor: 'rgba(255,255,255,0.22)', background: 'rgba(255,255,255,0.02)' }}
               >
-                See What You Replace
+                Book a demo
               </a>
             </div>
 
             <TrustRow />
-
-            <div className="mt-8 text-xs text-white/50">
-              Prefer to talk first?{' '}
-              <a href={`mailto:${SUPPORT_EMAIL}`} className="underline hover:text-white transition-colors">
-                {SUPPORT_EMAIL}
-              </a>
-            </div>
           </div>
 
           <div className="lg:col-span-7">
