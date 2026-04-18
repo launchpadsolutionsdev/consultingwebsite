@@ -12,6 +12,14 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   {
+    name: 'Products',
+    href: '/fund-raise',
+    children: [
+      { name: 'Fund-Raise', href: '/fund-raise', description: 'Fundraising intelligence for RE NXT foundations' },
+      { name: 'Raffle Management', href: '/services', description: 'Our consulting-led raffle management practice' },
+    ],
+  },
+  {
     name: 'Services',
     href: '/services',
     children: [
