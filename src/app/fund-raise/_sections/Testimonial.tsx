@@ -11,7 +11,7 @@ export default function Testimonial() {
         />
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <svg
           aria-hidden
           className="mb-6"
@@ -40,16 +40,22 @@ export default function Testimonial() {
         </svg>
 
         <blockquote
-          className="text-2xl md:text-3xl lg:text-[32px] font-medium leading-[1.35] tracking-tight mb-10"
+          className="text-xl md:text-2xl lg:text-[26px] font-medium leading-[1.45] tracking-tight mb-10"
           style={{ color: '#1A223D' }}
         >
-          For the first time, our team can look up any donor, see their full history, and
-          know exactly what to ask — without waiting on a report from someone else.{' '}
+          We&apos;ve spent years layering tools on top of Raiser&apos;s Edge to try to get
+          the insights we needed — separate reporting platforms, segmentation tools, AI
+          writing assistants. Fund-Raise is the first product that pulls all of that
+          together in a way that actually works for a fundraising team. Our staff can
+          analyze data in seconds through the dashboards or conversational AI, spot
+          anomalies before they become problems, and draft communications in a fraction of
+          the time. It&apos;s quietly replaced several line items in our software budget,
+          and honestly,{' '}
           <span
             className="bg-clip-text text-transparent"
             style={{ backgroundImage: 'linear-gradient(135deg, #1960F9, #3434D6)' }}
           >
-            Fund-Raise gave us control of our data.
+            it&apos;s become the tool our team reaches for first.
           </span>
         </blockquote>
 
