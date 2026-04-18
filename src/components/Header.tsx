@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import SearchModal from './SearchModal'
 
@@ -56,8 +55,6 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const menuRef = useRef<HTMLDivElement>(null)
-  const pathname = usePathname()
-  const isFrench = pathname?.startsWith('/fr')
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -146,14 +143,6 @@ export default function Header() {
               </button>
 
               <Link
-                href={isFrench ? '/' : '/fr'}
-                className="text-xs font-semibold text-gray-500 hover:text-accent-blue transition-colors uppercase tracking-wide"
-                aria-label={isFrench ? 'Switch to English' : 'Changer en français'}
-              >
-                {isFrench ? 'EN' : 'FR'}
-              </Link>
-
-              <Link
                 href="/#contact"
                 className="btn-primary !px-6 !py-2.5 !rounded-full"
               >
@@ -219,15 +208,6 @@ export default function Header() {
                     )}
                   </div>
                 ))}
-                <div className="flex items-center gap-4 py-3 border-t border-gray-100 mt-2">
-                  <Link
-                    href={isFrench ? '/' : '/fr'}
-                    className="text-sm font-semibold text-gray-600 hover:text-accent-blue"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {isFrench ? 'English' : 'Français'}
-                  </Link>
-                </div>
                 <Link
                   href="/#contact"
                   className="btn-primary text-center !px-6 !py-2.5 !rounded-full mt-4"

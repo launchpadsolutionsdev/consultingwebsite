@@ -32,7 +32,6 @@ const footerLinks = {
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'RSS Feed', href: '/feed.xml' },
-    { name: 'Français', href: '/fr' },
   ],
 }
 
