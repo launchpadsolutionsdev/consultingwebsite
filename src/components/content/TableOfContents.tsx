@@ -19,6 +19,7 @@ function slugify(text: string) {
 export default function TableOfContents({ minHeadings = 4 }: { minHeadings?: number }) {
   const [headings, setHeadings] = useState<Heading[]>([])
   const [active, setActive] = useState<string>('')
+  const [footerVisible, setFooterVisible] = useState(false)
 
   useEffect(() => {
     // Find all h2 and h3 inside .prose (the article body)
@@ -54,13 +55,32 @@ export default function TableOfContents({ minHeadings = 4 }: { minHeadings?: num
     )
 
     proseEls.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+
+    const footer = document.querySelector('footer')
+    let footerObserver: IntersectionObserver | undefined
+    if (footer) {
+      footerObserver = new IntersectionObserver(
+        ([entry]) => setFooterVisible(entry.isIntersecting),
+        { threshold: 0 },
+      )
+      footerObserver.observe(footer)
+    }
+
+    return () => {
+      observer.disconnect()
+      footerObserver?.disconnect()
+    }
   }, [minHeadings])
 
   if (headings.length === 0) return null
 
   return (
-    <nav className="hidden xl:block fixed top-40 right-8 w-64 max-h-[calc(100vh-12rem)] overflow-y-auto text-sm">
+    <nav
+      aria-hidden={footerVisible}
+      className={`hidden xl:block fixed top-40 right-8 w-64 max-h-[calc(100vh-12rem)] overflow-y-auto text-sm transition-opacity duration-200 ${
+        footerVisible ? 'opacity-0 pointer-events-none' : 'opacity-100'
+      }`}
+    >
       <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
         On this page
       </div>
