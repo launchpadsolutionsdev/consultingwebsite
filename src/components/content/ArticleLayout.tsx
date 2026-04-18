@@ -1,10 +1,14 @@
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { formatDate, getRelatedItems, type ContentItem, type ContentType } from '@/lib/content'
+import { authorSlugFromName, getAuthorByName } from '@/lib/authors'
 import { mdxComponents } from './MDXComponents'
 import ArticleCard from './ArticleCard'
 import Newsletter from '@/components/Newsletter'
 import ReadingProgress from './ReadingProgress'
+import BackToTop from './BackToTop'
+import TableOfContents from './TableOfContents'
+import Breadcrumbs from './Breadcrumbs'
 
 interface Props {
   item: ContentItem
@@ -19,15 +23,19 @@ export default function ArticleLayout({ item, type, basePath, hubLabel }: Props)
   return (
     <>
       <ReadingProgress />
+      <BackToTop />
+      <TableOfContents />
       <article className="pt-32 pb-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <nav className="mb-8 text-sm text-gray-500">
-            <Link href={basePath} className="hover:text-accent-blue transition-colors font-medium">
-              {hubLabel}
-            </Link>
-            <span className="mx-2 text-gray-300">/</span>
-            <span className="text-gray-700">{item.category}</span>
-          </nav>
+          <div className="mb-8">
+            <Breadcrumbs
+              crumbs={[
+                { name: 'Home', href: '/' },
+                { name: hubLabel, href: basePath },
+                { name: item.category },
+              ]}
+            />
+          </div>
 
           <div className="flex items-center gap-3 mb-5">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accent-blue/10 text-accent-blue">
@@ -47,21 +55,38 @@ export default function ArticleLayout({ item, type, basePath, hubLabel }: Props)
           <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl">{item.description}</p>
 
           <div className="flex flex-wrap items-center gap-4 pb-8 border-b border-gray-100">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center text-white font-semibold text-sm">
-                {item.author
-                  .split(' ')
-                  .map((n) => n[0])
-                  .slice(0, 2)
-                  .join('')}
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-primary-900">{item.author}</div>
-                <div className="text-xs text-gray-500">
-                  {formatDate(item.date)} · {item.readingTime}
-                </div>
-              </div>
-            </div>
+            {(() => {
+              const author = getAuthorByName(item.author)
+              const authorSlug = author?.slug ?? authorSlugFromName(item.author)
+              const initials = item.author
+                .split(' ')
+                .map((n) => n[0])
+                .slice(0, 2)
+                .join('')
+              return (
+                <Link
+                  href={`/authors/${authorSlug}`}
+                  className="flex items-center gap-3 group"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center text-white font-semibold text-sm overflow-hidden">
+                    {author?.image ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={author.image} alt={item.author} className="w-full h-full object-cover" />
+                    ) : (
+                      initials
+                    )}
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-primary-900 group-hover:text-accent-blue transition-colors">
+                      {item.author}
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      {formatDate(item.date)} · {item.readingTime}
+                    </div>
+                  </div>
+                </Link>
+              )
+            })()}
             {item.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 ml-auto">
                 {item.tags.slice(0, 4).map((tag) => (

@@ -1,7 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
+import SearchModal from './SearchModal'
 
 interface NavItem {
   name: string
@@ -19,6 +21,7 @@ const navigation: NavItem[] = [
       { name: 'Prize Raffles', href: '/services/prize-raffle', description: 'Vehicle, home & experience raffles' },
       { name: 'Strategic Consulting', href: '/services/consulting', description: 'Audits & assessments' },
       { name: 'Lightspeed AI', href: '/lightspeed', description: 'AI productivity suite' },
+      { name: 'Our Process', href: '/process', description: 'How we work with clients' },
     ],
   },
   {
@@ -29,11 +32,24 @@ const navigation: NavItem[] = [
       { name: 'Research & Reports', href: '/insights', description: 'Industry analysis' },
       { name: 'Case Studies', href: '/case-studies', description: 'Real results, real charities' },
       { name: 'Resources', href: '/resources', description: 'Checklists, guides, tools' },
+      { name: 'ROI Calculator', href: '/resources/roi-calculator', description: 'Interactive revenue modeling' },
+      { name: 'Events & Webinars', href: '/events', description: 'Upcoming + past sessions' },
       { name: 'Glossary', href: '/glossary', description: 'Charitable gaming terms' },
     ],
   },
-  { name: 'Clients', href: '/clients' },
-  { name: 'Team', href: '/team' },
+  {
+    name: 'Company',
+    href: '/team',
+    children: [
+      { name: 'Team', href: '/team', description: 'Meet our team' },
+      { name: 'Clients', href: '/clients', description: 'Who we work with' },
+      { name: 'Testimonials', href: '/testimonials', description: 'What clients say' },
+      { name: 'Partners', href: '/partners', description: 'Our ecosystem' },
+      { name: 'Press & Media', href: '/press', description: 'In the news' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'FAQ', href: '/faq', description: 'Common questions' },
+    ],
+  },
   { name: 'Contact', href: '/#contact' },
 ]
 
@@ -41,6 +57,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const menuRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
+  const isFrench = pathname?.startsWith('/fr')
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -52,8 +70,13 @@ export default function Header() {
     return () => document.removeEventListener('click', onClick)
   }, [])
 
+  const openSearch = () => {
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }))
+  }
+
   return (
     <>
+      <SearchModal />
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200/50 shadow-sm">
         <nav className="max-w-7xl mx-auto px-6 lg:px-10" ref={menuRef}>
           <div className="flex items-center justify-between py-5">
@@ -66,7 +89,7 @@ export default function Header() {
               />
             </Link>
 
-            <div className="hidden lg:flex items-center space-x-7">
+            <div className="hidden lg:flex items-center space-x-6">
               {navigation.map((item) =>
                 item.children ? (
                   <div key={item.name} className="relative">
@@ -108,8 +131,29 @@ export default function Header() {
                   <Link key={item.name} href={item.href} className="nav-link">
                     {item.name}
                   </Link>
-                )
+                ),
               )}
+
+              <button
+                type="button"
+                onClick={openSearch}
+                aria-label="Search"
+                className="flex items-center gap-2 px-3 py-2 rounded-full border border-gray-200 text-gray-500 hover:border-gray-300 hover:text-gray-700 transition-colors text-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <kbd className="px-1.5 py-0.5 rounded bg-gray-100 font-mono text-xs">⌘K</kbd>
+              </button>
+
+              <Link
+                href={isFrench ? '/' : '/fr'}
+                className="text-xs font-semibold text-gray-500 hover:text-accent-blue transition-colors uppercase tracking-wide"
+                aria-label={isFrench ? 'Switch to English' : 'Changer en français'}
+              >
+                {isFrench ? 'EN' : 'FR'}
+              </Link>
+
               <Link
                 href="/#contact"
                 className="btn-primary !px-6 !py-2.5 !rounded-full"
@@ -118,22 +162,34 @@ export default function Header() {
               </Link>
             </div>
 
-            <button
-              type="button"
-              className="lg:hidden p-2 text-gray-600"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <span className="sr-only">Open menu</span>
-              {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <div className="lg:hidden flex items-center gap-2">
+              <button
+                type="button"
+                onClick={openSearch}
+                aria-label="Search"
+                className="p-2 text-gray-600"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
+              </button>
+              <button
+                type="button"
+                className="p-2 text-gray-600"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                <span className="sr-only">Open menu</span>
+                {mobileMenuOpen ? (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
 
           {mobileMenuOpen && (
@@ -164,6 +220,15 @@ export default function Header() {
                     )}
                   </div>
                 ))}
+                <div className="flex items-center gap-4 py-3 border-t border-gray-100 mt-2">
+                  <Link
+                    href={isFrench ? '/' : '/fr'}
+                    className="text-sm font-semibold text-gray-600 hover:text-accent-blue"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {isFrench ? 'English' : 'Français'}
+                  </Link>
+                </div>
                 <Link
                   href="/#contact"
                   className="btn-primary text-center !px-6 !py-2.5 !rounded-full mt-4"

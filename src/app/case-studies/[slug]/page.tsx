@@ -17,9 +17,28 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Params): Metadata {
   const item = getItemBySlug('case-studies', params.slug)
   if (!item) return { title: 'Not Found' }
+  const ogParams = new URLSearchParams({
+    title: item.title,
+    category: item.category,
+    author: item.client ?? item.author,
+    type: 'case-studies',
+  })
+  const ogImage = `/api/og?${ogParams.toString()}`
   return {
     title: `${item.title} | Launchpad Case Study`,
     description: item.description,
+    openGraph: {
+      title: item.title,
+      description: item.description,
+      type: 'article',
+      images: [{ url: ogImage, width: 1200, height: 630, alt: item.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: item.title,
+      description: item.description,
+      images: [ogImage],
+    },
   }
 }
 

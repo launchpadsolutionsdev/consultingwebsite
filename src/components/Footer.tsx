@@ -8,18 +8,24 @@ const footerLinks = {
     { name: 'Prize Raffles', href: '/services/prize-raffle' },
     { name: 'Consulting', href: '/services/consulting' },
     { name: 'Lightspeed AI', href: '/lightspeed' },
+    { name: 'Our Process', href: '/process' },
   ],
   insights: [
     { name: 'Blog', href: '/blog' },
     { name: 'Research & Reports', href: '/insights' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Resources', href: '/resources' },
+    { name: 'ROI Calculator', href: '/resources/roi-calculator' },
+    { name: 'Events & Webinars', href: '/events' },
     { name: 'Glossary', href: '/glossary' },
   ],
   company: [
-    { name: 'About / Team', href: '/team' },
+    { name: 'Team', href: '/team' },
     { name: 'Clients', href: '/clients' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'Partners', href: '/partners' },
     { name: 'Press & Media', href: '/press' },
+    { name: 'Careers', href: '/careers' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/#contact' },
   ],
@@ -27,6 +33,7 @@ const footerLinks = {
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'RSS Feed', href: '/feed.xml' },
+    { name: 'Français', href: '/fr' },
   ],
 }
 

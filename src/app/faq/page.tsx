@@ -97,8 +97,26 @@ const faqs = [
 ]
 
 export default function FaqPage() {
+  const allQuestions = faqs.flatMap((cat) => cat.items)
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: allQuestions.map((q) => ({
+      '@type': 'Question',
+      name: q.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        // strip our markdown link syntax for the schema text
+        text: q.a.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1'),
+      },
+    })),
+  }
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="pt-32 pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-sm font-semibold text-accent-blue uppercase tracking-wider mb-4">
