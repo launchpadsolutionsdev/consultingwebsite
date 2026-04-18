@@ -36,7 +36,7 @@ function Avatar({ member }: { member: TeamMember }) {
     <div className={`w-full h-full bg-gradient-to-br ${g} relative`}>
       <div className="absolute inset-0 opacity-40">
         <div className="absolute top-0 right-0 w-48 h-48 bg-white/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-40 h-40 bg-pink-400/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-brand-orange/50 rounded-full blur-3xl" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-5xl md:text-6xl font-bold text-white/80 tracking-tight">

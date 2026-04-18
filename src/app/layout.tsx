@@ -16,8 +16,11 @@ export const metadata: Metadata = {
   keywords:
     'raffle management, charitable gaming, fundraising, lottery management, nonprofit fundraising, 50/50 raffle, Catch the Ace, AGCO',
   icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
+    icon: [
+      { url: '/brand/logos/launchpad-mark-color.svg', type: 'image/svg+xml' },
+      { url: '/brand/logos/launchpad-mark-color.png' },
+    ],
+    apple: '/brand/logos/launchpad-mark-color.png',
   },
   openGraph: {
     title: 'Launchpad Solutions | Raffle Management & Charitable Gaming Experts',
@@ -38,7 +41,7 @@ const orgJsonLd = {
   '@type': 'Organization',
   name: 'Launchpad Solutions',
   url: SITE_URL,
-  logo: `${SITE_URL}/launchpad-logo-full.png`,
+  logo: `${SITE_URL}/brand/logos/launchpad-horizontal-color.png`,
   description:
     'Raffle management and charitable gaming experts helping nonprofits build record-breaking fundraising programs.',
   sameAs: [],

@@ -82,7 +82,7 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/launchpad-logo-full.png"
+                src="/brand/logos/launchpad-horizontal-color.png"
                 alt="Launchpad Solutions"
                 className="h-10 w-auto"
               />

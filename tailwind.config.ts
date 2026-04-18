@@ -10,32 +10,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Navy scale — tuned around Launchpad Navy #1B2A4A
         primary: {
-          50: '#f0f7ff',
-          100: '#e0efff',
-          200: '#b8dbff',
-          300: '#7abfff',
-          400: '#2490ff',
-          500: '#0570de',
-          600: '#0058b8',
-          700: '#004494',
-          800: '#003370',
-          900: '#0A2540',
+          50: '#F4F6FA',
+          100: '#E5E9F1',
+          200: '#C8D0E1',
+          300: '#9AA8C6',
+          400: '#677AA2',
+          500: '#415581',
+          600: '#2E4066',
+          700: '#243352',
+          800: '#1B2A4A',
+          900: '#0F172A',
+        },
+        // Brand + legacy-compatible accent aliases
+        brand: {
+          orange: '#FF6B2B',
+          amber: '#F5A623',
+          navy: '#1B2A4A',
         },
         accent: {
-          cyan: '#12D8FA',
-          blue: '#0570DE',
-          navy: '#0A2540',
-          light: '#2490FF',
+          // Legacy names mapped to new palette so existing className usage re-tints automatically
+          blue: '#FF6B2B', // was #0570DE — now Launchpad Orange (primary CTA accent)
+          cyan: '#F5A623', // was #12D8FA — now Launchpad Amber (secondary accent)
+          navy: '#1B2A4A',
+          light: '#FFB385', // soft peach highlight for surfaces
         },
+        surface: '#F8F9FB',
+        divider: '#E5E7EB',
+        muted: '#6B7280',
       },
       backgroundImage: {
-        'gradient-brand': 'linear-gradient(135deg, #0A2540 0%, #0570DE 50%, #12D8FA 100%)',
-        'gradient-brand-reverse': 'linear-gradient(135deg, #12D8FA 0%, #0570DE 50%, #0A2540 100%)',
-        'gradient-subtle': 'linear-gradient(135deg, rgba(5, 112, 222, 0.08) 0%, rgba(18, 216, 250, 0.08) 100%)',
+        // Vertical brand gradient (per brand guide §2)
+        'gradient-brand': 'linear-gradient(180deg, #FF6B2B 0%, #F5A623 100%)',
+        'gradient-brand-reverse': 'linear-gradient(180deg, #F5A623 0%, #FF6B2B 100%)',
+        'gradient-brand-horizontal': 'linear-gradient(90deg, #FF6B2B 0%, #F5A623 100%)',
+        // Subtle warm tint for cards and surfaces
+        'gradient-subtle': 'linear-gradient(135deg, rgba(255, 107, 43, 0.06) 0%, rgba(245, 166, 35, 0.06) 100%)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Stolzl', 'Manrope', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
         serif: ['Georgia', 'Cambria', 'serif'],
       },
       animation: {
@@ -60,22 +74,22 @@ const config: Config = {
       typography: ({ theme }: { theme: (path: string) => string }) => ({
         DEFAULT: {
           css: {
-            '--tw-prose-body': '#334155',
-            '--tw-prose-headings': '#0A2540',
-            '--tw-prose-lead': '#425466',
-            '--tw-prose-links': '#0570DE',
-            '--tw-prose-bold': '#0A2540',
-            '--tw-prose-counters': '#6B7C93',
-            '--tw-prose-bullets': '#b8dbff',
-            '--tw-prose-hr': '#E3E8EE',
-            '--tw-prose-quotes': '#0A2540',
-            '--tw-prose-quote-borders': '#0570DE',
-            '--tw-prose-captions': '#6B7C93',
-            '--tw-prose-code': '#0A2540',
-            '--tw-prose-pre-code': '#E3E8EE',
-            '--tw-prose-pre-bg': '#0A2540',
-            '--tw-prose-th-borders': '#E3E8EE',
-            '--tw-prose-td-borders': '#E3E8EE',
+            '--tw-prose-body': '#1B2A4A',
+            '--tw-prose-headings': '#1B2A4A',
+            '--tw-prose-lead': '#415581',
+            '--tw-prose-links': '#FF6B2B',
+            '--tw-prose-bold': '#1B2A4A',
+            '--tw-prose-counters': '#6B7280',
+            '--tw-prose-bullets': '#FFB385',
+            '--tw-prose-hr': '#E5E7EB',
+            '--tw-prose-quotes': '#1B2A4A',
+            '--tw-prose-quote-borders': '#FF6B2B',
+            '--tw-prose-captions': '#6B7280',
+            '--tw-prose-code': '#1B2A4A',
+            '--tw-prose-pre-code': '#E5E7EB',
+            '--tw-prose-pre-bg': '#1B2A4A',
+            '--tw-prose-th-borders': '#E5E7EB',
+            '--tw-prose-td-borders': '#E5E7EB',
             maxWidth: '72ch',
             fontSize: '1.125rem',
             lineHeight: '1.75',
@@ -101,8 +115,8 @@ const config: Config = {
             'blockquote p:last-of-type::after': { content: 'none' },
             blockquote: {
               borderLeftWidth: '4px',
-              borderLeftColor: '#0570DE',
-              background: 'rgba(5, 112, 222, 0.04)',
+              borderLeftColor: '#FF6B2B',
+              background: 'rgba(255, 107, 43, 0.05)',
               padding: '1rem 1.25rem',
               fontStyle: 'normal',
               fontWeight: '500',
@@ -111,14 +125,14 @@ const config: Config = {
             a: {
               fontWeight: '500',
               textDecoration: 'underline',
-              textDecorationColor: 'rgba(5, 112, 222, 0.3)',
+              textDecorationColor: 'rgba(255, 107, 43, 0.35)',
               textUnderlineOffset: '3px',
               '&:hover': {
-                textDecorationColor: '#0570DE',
+                textDecorationColor: '#FF6B2B',
               },
             },
             code: {
-              background: '#F6F9FC',
+              background: '#F8F9FB',
               padding: '0.15em 0.4em',
               borderRadius: '0.25rem',
               fontWeight: '500',
@@ -128,7 +142,7 @@ const config: Config = {
             'code::after': { content: 'none' },
             img: {
               borderRadius: '0.75rem',
-              boxShadow: '0 10px 40px rgba(10, 37, 64, 0.08)',
+              boxShadow: '0 10px 40px rgba(27, 42, 74, 0.08)',
             },
           },
         },

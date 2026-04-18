@@ -52,7 +52,7 @@ function CTABanner({
   return (
     <div className="not-prose my-12 rounded-2xl bg-gradient-brand p-8 md:p-10 text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-300 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-amber rounded-full blur-3xl" />
       </div>
       <div className="relative">
         <h3 className="text-2xl md:text-3xl font-bold mb-2">{title}</h3>

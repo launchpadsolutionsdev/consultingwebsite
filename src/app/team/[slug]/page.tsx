@@ -50,7 +50,7 @@ function BigAvatar({ member }: { member: TeamMember }) {
     <div className={`w-full h-full bg-gradient-to-br ${g} relative`}>
       <div className="absolute inset-0 opacity-40">
         <div className="absolute top-0 right-0 w-72 h-72 bg-white/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-60 h-60 bg-pink-400/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-60 h-60 bg-brand-orange/50 rounded-full blur-3xl" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-8xl md:text-9xl font-bold text-white/40 tracking-tight">
