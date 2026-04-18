@@ -47,15 +47,13 @@ function Avatar({ member }: { member: TeamMember }) {
   )
 }
 
-function TeamCard({ member, featured = false }: { member: TeamMember; featured?: boolean }) {
+function TeamCard({ member }: { member: TeamMember }) {
   return (
     <Link
       href={`/team/${member.slug}`}
-      className={`group block bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all ${
-        featured ? 'md:col-span-2' : ''
-      }`}
+      className="group block bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
     >
-      <div className={`relative overflow-hidden ${featured ? 'aspect-[16/9]' : 'aspect-[4/3]'}`}>
+      <div className="relative overflow-hidden aspect-[4/3]">
         <Avatar member={member} />
       </div>
       <div className="p-7">
@@ -143,9 +141,9 @@ export default function TeamPage() {
               Day-to-day, we&apos;re {STAFF_MEMBERS.length} people.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {STAFF_MEMBERS.map((m, i) => (
-              <TeamCard key={m.slug} member={m} featured={i === 0} />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {STAFF_MEMBERS.map((m) => (
+              <TeamCard key={m.slug} member={m} />
             ))}
           </div>
         </div>
