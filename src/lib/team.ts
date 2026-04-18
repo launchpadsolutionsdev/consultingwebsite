@@ -31,7 +31,7 @@ export const TEAM: TeamMember[] = [
     ],
     focusAreas: ['Strategy', 'Client engagements', 'Product & software', 'Creative direction'],
     image: '/images/torin-gunnell.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/torin-gunnell-mba-670401157/',
     email: 'torin@launchpadsolutions.ca',
   },
   {
@@ -51,7 +51,7 @@ export const TEAM: TeamMember[] = [
       'Sales & competitor analysis',
     ],
     focusAreas: ['Marketing', 'Operations', 'Creative direction', 'Client success'],
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/cassandra-carangi-381a1b258/',
     email: 'cassandra@launchpadsolutions.ca',
   },
   {
@@ -93,6 +93,7 @@ export const TEAM: TeamMember[] = [
     ],
     focusAreas: ['Strategic guidance', 'Governance', 'Sector advocacy', 'Speaking'],
     image: '/images/glenn-craig.jpeg',
+    linkedin: 'https://www.linkedin.com/in/glenn-craig-3a04a611/',
   },
 ]
 
