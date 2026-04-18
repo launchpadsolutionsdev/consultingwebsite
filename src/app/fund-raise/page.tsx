@@ -48,8 +48,8 @@ export default function FundRaisePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
       <Hero />
-      <FinalCta />
       <Testimonial />
+      <FinalCta />
     </>
   )
 }
