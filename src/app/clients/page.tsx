@@ -139,20 +139,26 @@ export default function ClientsPage() {
       </section>
 
       <section className="py-20 bg-primary-900 gradient-mesh-card relative">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
-            Want to talk about your organization?
-          </h2>
-          <p className="text-xl text-white/80 mb-10">
-            Book a free 30-minute consultation. We&apos;ll tell you honestly whether your
-            organization is a good fit.
-          </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
-          >
-            Book a Consultation
-          </Link>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-5">
+                Want to talk about your organization?
+              </h2>
+              <p className="text-xl text-white/80">
+                Book a free 30-minute consultation. We&apos;ll tell you honestly whether your
+                organization is a good fit.
+              </p>
+            </div>
+            <div className="md:text-right">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
+              >
+                Book a Consultation
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -225,22 +225,28 @@ export default function TeamMemberPage({ params }: Params) {
       )}
 
       <section className="py-16 bg-primary-900 gradient-mesh-card relative">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-            {isAdvisor
-              ? `Looking for strategic guidance?`
-              : `Want to work with ${member.name.split(' ')[0]} and the team?`}
-          </h2>
-          <p className="text-lg text-white/80 mb-8">
-            Book a free 30-minute consultation. We&apos;ll discuss your program and goals, and tell
-            you honestly whether we&apos;re the right partner.
-          </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Book a Consultation
-          </Link>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+                {isAdvisor
+                  ? `Looking for strategic guidance?`
+                  : `Want to work with ${member.name.split(' ')[0]} and the team?`}
+              </h2>
+              <p className="text-lg text-white/80">
+                Book a free 30-minute consultation. We&apos;ll discuss your program and goals, and tell
+                you honestly whether we&apos;re the right partner.
+              </p>
+            </div>
+            <div className="md:text-right">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Book a Consultation
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

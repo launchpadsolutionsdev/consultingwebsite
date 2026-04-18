@@ -194,19 +194,25 @@ export default function ProcessPage() {
       </section>
 
       <section className="py-20 bg-primary-900 gradient-mesh-card relative">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            Ready for Phase 0?
-          </h2>
-          <p className="text-xl text-white/80 mb-10">
-            A 30-minute discovery call is how every successful engagement starts.
-          </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
-          >
-            Book Your Discovery Call
-          </Link>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 tracking-tight">
+                Ready for Phase 0?
+              </h2>
+              <p className="text-xl text-white/80">
+                A 30-minute discovery call is how every successful engagement starts.
+              </p>
+            </div>
+            <div className="md:text-right">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
+              >
+                Book Your Discovery Call
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
