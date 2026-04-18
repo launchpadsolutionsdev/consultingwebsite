@@ -71,7 +71,7 @@ export default function CareersPage() {
                 No open roles right now.
               </h3>
               <p className="text-gray-600 max-w-xl mx-auto mb-6">
-                We hire only when we need to \u2014 not to a quota. That said, if you think
+                We hire only when we need to — not to a quota. That said, if you think
                 you&apos;d be exceptional on our team, send us a note. We keep great candidates on
                 file and reach out when something opens.
               </p>

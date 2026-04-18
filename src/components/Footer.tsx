@@ -22,7 +22,6 @@ const footerLinks = {
     { name: 'Team', href: '/team' },
     { name: 'Clients', href: '/clients' },
     { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Partners', href: '/partners' },
     { name: 'Press & Media', href: '/press' },
     { name: 'Careers', href: '/careers' },
     { name: 'FAQ', href: '/faq' },

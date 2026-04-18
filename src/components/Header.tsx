@@ -42,7 +42,6 @@ const navigation: NavItem[] = [
       { name: 'Team', href: '/team', description: 'Meet our team' },
       { name: 'Clients', href: '/clients', description: 'Who we work with' },
       { name: 'Testimonials', href: '/testimonials', description: 'What clients say' },
-      { name: 'Partners', href: '/partners', description: 'Our ecosystem' },
       { name: 'Press & Media', href: '/press', description: 'In the news' },
       { name: 'Careers', href: '/careers', description: 'Join our team' },
       { name: 'FAQ', href: '/faq', description: 'Common questions' },

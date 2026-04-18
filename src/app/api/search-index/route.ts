@@ -41,7 +41,6 @@ export async function GET() {
     { title: 'Our Process', description: 'How a Launchpad engagement actually works', category: 'Company', href: '/process', type: 'Page' },
     { title: 'Testimonials', description: 'What our clients say', category: 'Company', href: '/testimonials', type: 'Page' },
     { title: 'Careers', description: 'Join Launchpad Solutions', category: 'Company', href: '/careers', type: 'Page' },
-    { title: 'Partners', description: 'Ecosystem partners and platforms', category: 'Company', href: '/partners', type: 'Page' },
     { title: 'Clients', description: 'Charities we\u2019ve worked with', category: 'Company', href: '/clients', type: 'Page' },
     { title: 'Press & Media', description: 'News coverage and media mentions', category: 'Company', href: '/press', type: 'Page' },
     { title: 'FAQ', description: 'Frequently asked questions', category: 'Help', href: '/faq', type: 'Page' },

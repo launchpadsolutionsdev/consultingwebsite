@@ -45,7 +45,7 @@ export default function EventRegistrationForm({ eventTitle }: { eventTitle: stri
         </svg>
         <h2 className="text-2xl font-bold text-primary-900 mb-2">You&apos;re in.</h2>
         <p className="text-gray-600">
-          We\u2019ve sent a calendar invite and joining instructions to <strong>{email}</strong>.
+          We&apos;ve sent a calendar invite and joining instructions to <strong>{email}</strong>.
           See you at <strong>{eventTitle}</strong>.
         </p>
       </div>
