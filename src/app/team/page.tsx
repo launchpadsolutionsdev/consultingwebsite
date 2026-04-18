@@ -1,46 +1,96 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { STAFF_MEMBERS, ADVISORS, type TeamMember } from '@/lib/team'
 
 export const metadata: Metadata = {
   title: 'Team | Launchpad Solutions',
   description:
-    'Meet the team behind Launchpad Solutions — charitable gaming veterans who have built and operated some of the largest raffle programs in North America.',
+    'Meet the team behind Launchpad Solutions — charitable gaming veterans and strategic advisors who have built and operated some of the largest raffle programs in North America.',
 }
 
-const team = [
-  {
-    name: 'Torin Gunnell',
-    role: 'Founder & CEO',
-    bio: 'Torin founded Launchpad Solutions after building and operating some of the largest electronic 50/50 raffle programs in North America, including the record-breaking Thunder Bay Regional Health Sciences Foundation program. He has helped charities raise over $180M in cumulative ticket revenue over his career.',
-    expertise: ['Program design', '50/50 + Catch the Ace operations', 'Regulatory compliance', 'Team leadership'],
-    image: '/images/Torin-Glenn-Cass-SMALL.jpg',
-    linkedin: '#',
-  },
-  {
-    name: 'Program Director',
-    role: 'Operations',
-    bio: 'Day-to-day operations lead across our client portfolio. Manages weekly marketing cadence, draw operations, and cross-client playbook consistency.',
-    expertise: ['Operations', 'Marketing execution', 'Client success'],
-    image: null,
-    linkedin: '#',
-  },
-  {
-    name: 'Compliance Lead',
-    role: 'Licensing & Regulatory',
-    bio: 'Leads our licensing and ongoing compliance work across AGCO, provincial commissions, and U.S. state regulators. Ensures every client program operates cleanly within every jurisdiction\u2019s framework.',
-    expertise: ['AGCO', 'Multi-jurisdictional licensing', 'Gaming-related supplier coordination'],
-    image: null,
-    linkedin: '#',
-  },
-  {
-    name: 'Marketing Strategist',
-    role: 'Creative & Campaigns',
-    bio: 'Designs and executes marketing campaigns across client programs. Builds the weekly cadence, the creative, and the paid media strategy that drives ticket volume.',
-    expertise: ['Email + SMS marketing', 'Paid social', 'Creative direction', 'PR strategy'],
-    image: null,
-    linkedin: '#',
-  },
-]
+function initialsOf(name: string): string {
+  return name
+    .split(' ')
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join('')
+    .toUpperCase()
+}
+
+function Avatar({ member }: { member: TeamMember }) {
+  if (member.image) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+    )
+  }
+  const gradients = [
+    'from-primary-900 via-primary-700 to-accent-blue',
+    'from-accent-blue via-blue-500 to-accent-cyan',
+    'from-purple-700 via-purple-500 to-pink-500',
+    'from-emerald-600 via-emerald-500 to-teal-500',
+  ]
+  // Deterministic gradient per slug
+  const g = gradients[member.slug.length % gradients.length]
+  return (
+    <div className={`w-full h-full bg-gradient-to-br ${g} relative`}>
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-white/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-pink-400/40 rounded-full blur-3xl" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-5xl md:text-6xl font-bold text-white/80 tracking-tight">
+          {initialsOf(member.name)}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function TeamCard({ member, featured = false }: { member: TeamMember; featured?: boolean }) {
+  return (
+    <Link
+      href={`/team/${member.slug}`}
+      className={`group block bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all ${
+        featured ? 'md:col-span-2' : ''
+      }`}
+    >
+      <div className={`relative overflow-hidden ${featured ? 'aspect-[16/9]' : 'aspect-[4/3]'}`}>
+        <Avatar member={member} />
+      </div>
+      <div className="p-7">
+        <div className="text-xs font-semibold text-accent-blue uppercase tracking-wider mb-1.5">
+          {member.role}
+        </div>
+        <h3 className="text-2xl font-bold text-primary-900 tracking-tight mb-3 group-hover:text-accent-blue transition-colors">
+          {member.name}
+        </h3>
+        <p className="text-gray-600 leading-relaxed mb-5">{member.shortBio}</p>
+        <div className="flex flex-wrap gap-2 mb-5">
+          {member.expertise.slice(0, 3).map((e) => (
+            <span
+              key={e}
+              className="px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-medium"
+            >
+              {e}
+            </span>
+          ))}
+        </div>
+        <span className="inline-flex items-center text-sm font-semibold text-accent-blue group-hover:text-primary-900 transition-colors">
+          Read full profile
+          <svg
+            className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </div>
+    </Link>
+  )
+}
 
 const values = [
   {
@@ -85,64 +135,70 @@ export default function TeamPage() {
 
       <section className="py-16 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {team.map((person) => (
-              <div
-                key={person.name}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all"
-              >
-                <div className="aspect-[16/9] relative overflow-hidden">
-                  {person.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={person.image}
-                      alt={person.name}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-primary-900 via-primary-700 to-accent-blue relative">
-                      <div className="absolute inset-0 opacity-40">
-                        <div className="absolute top-0 right-0 w-72 h-72 bg-accent-cyan rounded-full blur-3xl" />
-                        <div className="absolute bottom-0 left-0 w-60 h-60 bg-pink-500 rounded-full blur-3xl" />
-                      </div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-7xl font-bold text-white/20">
-                          {person.name
-                            .split(' ')
-                            .map((n) => n[0])
-                            .slice(0, 2)
-                            .join('')}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className="p-8">
-                  <div className="text-sm font-semibold text-accent-blue uppercase tracking-wider mb-1">
-                    {person.role}
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary-900 tracking-tight mb-4">
-                    {person.name}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-5">{person.bio}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {person.expertise.map((e) => (
-                      <span
-                        key={e}
-                        className="px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-medium"
-                      >
-                        {e}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          <div className="max-w-3xl mb-10">
+            <div className="text-sm font-semibold text-accent-blue uppercase tracking-wider mb-3">
+              The team
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 tracking-tight">
+              Day-to-day, we&apos;re {STAFF_MEMBERS.length} people.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {STAFF_MEMBERS.map((m, i) => (
+              <TeamCard key={m.slug} member={m} featured={i === 0} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      {ADVISORS.length > 0 && (
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-3xl mb-10">
+              <div className="text-sm font-semibold text-accent-cyan uppercase tracking-wider mb-3">
+                Strategic Advisors
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 tracking-tight mb-3">
+                The people we turn to when it matters.
+              </h2>
+              <p className="text-gray-600 leading-relaxed">
+                Our advisors aren&apos;t part of day-to-day client operations. They bring perspective,
+                institutional memory, and hard-earned judgment to the strategic calls that shape
+                where Launchpad \u2014 and our clients &mdash; go next.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {ADVISORS.map((m) => (
+                <Link
+                  key={m.slug}
+                  href={`/team/${m.slug}`}
+                  className="group relative rounded-3xl overflow-hidden border border-gray-100 bg-white hover:shadow-xl transition-all hover:-translate-y-1"
+                >
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-accent-cyan/90 text-primary-900 backdrop-blur-sm">
+                      Advisor
+                    </span>
+                  </div>
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Avatar member={m} />
+                  </div>
+                  <div className="p-6">
+                    <div className="text-xs font-semibold text-accent-blue uppercase tracking-wider mb-1.5">
+                      {m.role}
+                    </div>
+                    <h3 className="text-xl font-bold text-primary-900 tracking-tight mb-2 group-hover:text-accent-blue transition-colors">
+                      {m.name}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-sm">{m.shortBio}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-24 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
             <div className="text-sm font-semibold text-accent-blue uppercase tracking-wider mb-4">
@@ -154,7 +210,7 @@ export default function TeamPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {values.map((v) => (
-              <div key={v.title} className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
+              <div key={v.title} className="p-8 bg-white rounded-3xl border border-gray-100">
                 <h3 className="text-xl font-bold text-primary-900 mb-3 tracking-tight">{v.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{v.body}</p>
               </div>
