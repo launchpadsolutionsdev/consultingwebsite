@@ -162,7 +162,7 @@ export default function TeamPage() {
               <p className="text-gray-600 leading-relaxed">
                 Our advisors aren&apos;t part of day-to-day client operations. They bring perspective,
                 institutional memory, and hard-earned judgment to the strategic calls that shape
-                where Launchpad \u2014 and our clients &mdash; go next.
+                where Launchpad — and our clients — go next.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
