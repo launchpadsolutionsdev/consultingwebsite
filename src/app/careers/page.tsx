@@ -147,19 +147,25 @@ export default function CareersPage() {
       </section>
 
       <section className="py-20 bg-primary-900 gradient-mesh-card relative">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            Not seeing the right role?
-          </h2>
-          <p className="text-xl text-white/80 mb-10">
-            Send us a thoughtful note about what you&apos;d want to build here. We read every one.
-          </p>
-          <a
-            href="mailto:careers@launchpadsolutions.ca"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
-          >
-            careers@launchpadsolutions.ca
-          </a>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 tracking-tight">
+                Not seeing the right role?
+              </h2>
+              <p className="text-xl text-white/80">
+                Send us a thoughtful note about what you&apos;d want to build here. We read every one.
+              </p>
+            </div>
+            <div className="md:text-right">
+              <a
+                href="mailto:careers@launchpadsolutions.ca"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
+              >
+                careers@launchpadsolutions.ca
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

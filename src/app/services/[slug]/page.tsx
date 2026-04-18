@@ -221,23 +221,29 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       <section className="py-20 bg-primary-900 gradient-mesh-card relative">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
-            {s.ctaTitle}
-          </h2>
-          <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            A 30-minute consultation is usually all it takes to decide whether we&apos;re the right fit.
-            No sales pitch.
-          </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
-          >
-            Book a Free Consultation
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-5">
+                {s.ctaTitle}
+              </h2>
+              <p className="text-xl text-white/80">
+                A 30-minute consultation is usually all it takes to decide whether we&apos;re the right fit.
+                No sales pitch.
+              </p>
+            </div>
+            <div className="md:text-right">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-white text-primary-900 font-semibold hover:bg-gray-100 transition-colors text-lg"
+              >
+                Book a Free Consultation
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
