@@ -46,13 +46,13 @@ export default function CaseStudiesIndex() {
                     background: item.image
                       ? `url(${item.image}) center/cover`
                       : `linear-gradient(135deg, ${
-                          i % 2 === 0 ? '#0A2540 0%, #0570DE 100%' : '#0570DE 0%, #12D8FA 100%'
+                          i % 2 === 0 ? '#1B2A4A 0%, #FF6B2B 100%' : '#FF6B2B 0%, #F5A623 100%'
                         })`,
                   }}
                 >
                   {!item.image && (
                     <div className="absolute inset-0 opacity-40">
-                      <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500 rounded-full blur-3xl" />
+                      <div className="absolute top-0 right-0 w-48 h-48 bg-brand-orange rounded-full blur-3xl" />
                     </div>
                   )}
                   {item.result && (

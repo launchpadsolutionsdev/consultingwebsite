@@ -34,7 +34,7 @@ export default function ArticleCard({
       >
         <div className="absolute inset-0 opacity-40">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent-cyan rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-pink-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-brand-orange rounded-full blur-3xl" />
         </div>
         <div className="relative h-full flex flex-col justify-end p-8 md:p-12 lg:p-16">
           <div className="flex items-center gap-3 mb-5">
@@ -93,13 +93,13 @@ export default function ArticleCard({
         style={{
           background: image
             ? `url(${image}) center/cover`
-            : 'linear-gradient(135deg, #0A2540 0%, #0570DE 50%, #12D8FA 100%)',
+            : 'linear-gradient(135deg, #1B2A4A 0%, #FF6B2B 50%, #F5A623 100%)',
         }}
       >
         {!image && (
           <div className="absolute inset-0 opacity-60">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-cyan-300 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-48 h-48 bg-brand-orange rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-brand-amber rounded-full blur-3xl" />
           </div>
         )}
         <div className="absolute top-4 left-4">

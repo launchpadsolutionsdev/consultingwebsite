@@ -23,8 +23,8 @@ export async function GET(req: Request) {
           justifyContent: 'space-between',
           padding: '64px 80px',
           background:
-            'linear-gradient(135deg, #0A2540 0%, #0570DE 55%, #12D8FA 100%)',
-          fontFamily: 'Inter, system-ui, sans-serif',
+            'linear-gradient(135deg, #1B2A4A 0%, #FF6B2B 60%, #F5A623 100%)',
+          fontFamily: 'Manrope, system-ui, sans-serif',
           color: 'white',
           position: 'relative',
         }}
@@ -38,7 +38,7 @@ export async function GET(req: Request) {
             width: 420,
             height: 420,
             borderRadius: '50%',
-            background: 'rgba(255, 107, 53, 0.45)',
+            background: 'rgba(255, 107, 43, 0.55)',
             filter: 'blur(80px)',
             display: 'flex',
           }}
@@ -51,7 +51,7 @@ export async function GET(req: Request) {
             width: 380,
             height: 380,
             borderRadius: '50%',
-            background: 'rgba(233, 30, 140, 0.3)',
+            background: 'rgba(245, 166, 35, 0.45)',
             filter: 'blur(80px)',
             display: 'flex',
           }}
@@ -91,8 +91,8 @@ export async function GET(req: Request) {
                 alignSelf: 'flex-start',
                 padding: '6px 16px',
                 borderRadius: 999,
-                background: '#12D8FA',
-                color: '#0A2540',
+                background: '#F5A623',
+                color: '#1B2A4A',
                 fontSize: 18,
                 fontWeight: 700,
                 textTransform: 'uppercase',

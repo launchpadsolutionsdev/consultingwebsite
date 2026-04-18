@@ -45,7 +45,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/launchpad-logo-full.png"
+                src="/brand/logos/launchpad-horizontal-color.png"
                 alt="Launchpad Solutions"
                 className="h-10 w-auto"
               />

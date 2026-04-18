@@ -55,7 +55,7 @@ export default function InsightArticle({ params }: Params) {
     publisher: {
       '@type': 'Organization',
       name: 'Launchpad Solutions',
-      logo: { '@type': 'ImageObject', url: '/launchpad-logo-full.png' },
+      logo: { '@type': 'ImageObject', url: '/brand/logos/launchpad-horizontal-color.png' },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `/insights/${item.slug}` },
   }
