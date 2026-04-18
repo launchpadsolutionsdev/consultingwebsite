@@ -1,13 +1,5 @@
 import type { Metadata } from 'next'
 import Hero from './_sections/Hero'
-import Replaces from './_sections/Replaces'
-import Dashboards from './_sections/Dashboards'
-import AskFundRaise from './_sections/AskFundRaise'
-import Analytics from './_sections/Analytics'
-import WritingTools from './_sections/WritingTools'
-import Reports from './_sections/Reports'
-import Pricing from './_sections/Pricing'
-import Faq from './_sections/Faq'
 import FinalCta from './_sections/FinalCta'
 
 export const metadata: Metadata = {
@@ -55,14 +47,6 @@ export default function FundRaisePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
       <Hero />
-      <Replaces />
-      <Dashboards />
-      <AskFundRaise />
-      <Analytics />
-      <WritingTools />
-      <Reports />
-      <Pricing />
-      <Faq />
       <FinalCta />
     </>
   )
